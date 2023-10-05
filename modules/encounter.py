@@ -1,5 +1,5 @@
 from modules.dice import roll
-from data.acess import find_result
+from data.acess_encounter import get_encounter_result
 
 def get_encounter(local, difficulty, level):
     """
@@ -25,13 +25,13 @@ def get_encounter(local, difficulty, level):
                 break
         
         if not_have_exception:
-            resultado = find_result(local, difficulty, level)
+            resultado = get_encounter_result(local, difficulty, level)
             monster, min_m, max_m = resultado
 
         
         #treatament for animals
         if monster == 'animais' or local == 'animais':
-            resultado = find_result('animais', difficulty, level)
+            resultado = get_encounter_result('animais', difficulty, level)
             monster, min_m, max_m = resultado
 
         
@@ -39,28 +39,28 @@ def get_encounter(local, difficulty, level):
         if monster == 'qualquer' or local == 'qualquer':
             if not min_m == '0':
                 min_m = str(min_m)
-                resultado = find_result('qualquer', difficulty, min_m)
+                resultado = get_encounter_result('qualquer', difficulty, min_m)
                 monster, min_m, max_m = resultado
             else:
-                resultado = find_result('qualquer', difficulty, level)
+                resultado = get_encounter_result('qualquer', difficulty, level)
                 monster, min_m, max_m = resultado
 
         #treatament for "Extraplanar" type 
         if monster == 'extraplanar' or local == 'extraplanar':
             if not min_m == '0':
                 min_m = str(min_m)
-                resultado = find_result('extraplanar', difficulty, min_m)
+                resultado = get_encounter_result('extraplanar', difficulty, min_m)
                 monster, min_m, max_m = resultado
             else:
-                resultado = find_result('extraplanar', difficulty, level)
+                resultado = get_encounter_result('extraplanar', difficulty, level)
                 monster, min_m, max_m = resultado
 
         #treatament for "humano & semi-humanos" type 
         if monster == 'humano' or local == 'humano':
-            resultado = find_result('humano', difficulty, level)
+            resultado = get_encounter_result('humano', difficulty, level)
             monster, min_m, max_m = resultado
             if monster == "especial":
-                resultado = find_result('humano', difficulty, 'especial')
+                resultado = get_encounter_result('humano', difficulty, 'especial')
                 monster, min_m, max_m = resultado
 
         return f'Foi encontrado {roll(min_m, max_m)} {monster.capitalize()}.'
