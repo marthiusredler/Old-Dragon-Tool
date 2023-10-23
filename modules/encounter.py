@@ -7,12 +7,12 @@ def get_encounter(local, difficulty, level):
 
     Args:
         local (_string_): _Local that players will be, can be: planicie, montanha, colina, pantano, geleira, floresta, deserto, oceano, qualquer, in same have: animais, extraplanares and humanos_
-        difficulty (_string_): _description_
-        level (_strings_): _description_
-
+        difficulty (_string_): _Difficulty of the generated encounter, being divided into: easy, normal, hard._
+        level (_strings_): _Level of adventurers who encounter the challenge, being: beginner, heroic, advanced._
+    
     Returns:
         _string_: _generate encounter basead in args_
-    """    
+    """ 
     try:
         exceptions = ['animais', 'qualquer', 'extraplanar', 'humano']
         not_have_exception = True
@@ -66,11 +66,24 @@ def get_encounter(local, difficulty, level):
         return f'Foi encontrado {roll(min_m, max_m)} {monster.capitalize()}.'
 
     except Exception as error:
+        print(type(error))
+        print(error.args)
         print(error)
-        return f"Ocorreu Um Erro!"
+        return 'Houve um Erro'
 
 def test_encounter(local, difficulty, level, danger):
+    """
+    Function that tests the chance of an encounter occurring and generates the same if it occurs based on local, difficulty, level and danger based in Tabelas de Monstros from Guia de Campanhas: Ermos and Livro Basico III: Monstros e Inimigos
+
+    Args:
+        local (_string_): _Local that players will be, can be: planicie, montanha, colina, pantano, geleira, floresta, deserto, oceano, qualquer, in same have: animais, extraplanares and humanos_
+        difficulty (_string_): _Difficulty of the generated encounter, being divided into: easy, normal, hard._
+        level (_string_): _Level of adventurers who encounter the challenge, being: beginner, heroic, advanced._
+        danger (_string_): _Level of danger of the place where they are located, divided into: normal, dangerous, extreme._
     
+    Returns:
+        _string_: _generate encounter basead in args_
+    """ 
     try:
         result = "" #Test results
     
@@ -86,9 +99,9 @@ def test_encounter(local, difficulty, level, danger):
         }
         
         # Get the encounter_mod based in danger type based in Guia de Campanha: Ermos.
-        if danger == 'perigoso':
+        if danger == 'dangerous':
             encounter_mod = 2
-        elif danger == 'extremo':
+        elif danger == 'extreme':
             encounter_mod = 3
         else:
             encounter_mod = 1
