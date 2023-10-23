@@ -6,30 +6,27 @@ ROOT_DIR = Path(__file__).parent
 DB_NAME = 'encounters_table.db'
 DB_FILE = ROOT_DIR / DB_NAME
 
-def get_encounter_result(local, difficulty, level):
+def get_encounter_result(local, difficulty, level, isanimal = False):
     
     #Connection with DB
     connection = sqlite3.connect(DB_FILE)
     cursor = connection.cursor()
     
     #animals must have other treatment
-    if local == "animais":
+    if isanimal == True:
         dice_value = dice.roll(1, 6)
         cursor.execute(
             f"""
             SELECT encounter, min_creatures, max_creatures
-            FROM 'animais' WHERE dice_value = '{dice_value}'
+            FROM 'animais' WHERE dice_value = '{dice_value}' AND habitat = '{local}'
             """
         )
         
         result = cursor.fetchall()
         result = result[0]
-        
         cursor.close()
         connection.close()
-        
         return result
-    
     
     #QUALQUER must have other treatment
     elif local == "qualquer":
@@ -53,10 +50,8 @@ def get_encounter_result(local, difficulty, level):
         
         result = cursor.fetchall()
         result = result[0]
-        
         cursor.close()
         connection.close()
-        
         return result
 
     #humans must have other treatment
@@ -71,10 +66,8 @@ def get_encounter_result(local, difficulty, level):
         
         result = cursor.fetchall()
         result = result[0]
-        
         cursor.close()
         connection.close()
-        
         return result
     
     #extraplanar must have other treatment
@@ -99,13 +92,11 @@ def get_encounter_result(local, difficulty, level):
         
         result = cursor.fetchall()
         result = result[0]
-        
         cursor.close()
         connection.close()
-        
         return result
     
-    #Define Result
+    #Define Result if not have exceptions
     
     if difficulty == 'easy':
         difficulty = dice.roll(1, 6)
@@ -123,9 +114,6 @@ def get_encounter_result(local, difficulty, level):
     
     result = cursor.fetchall()
     result = result[0]
-    
-    #close DB connection and cursor
     cursor.close()
     connection.close()
-    
     return result

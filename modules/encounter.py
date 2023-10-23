@@ -1,7 +1,7 @@
 from modules.dice import roll
 from data.acess_encounter import get_encounter_result
 
-def get_encounter(local, difficulty, level):
+def get_encounter(local, difficulty, level, isanimal = False):
     """
     Function that gets local, difficulty and level based in Tabelas de Monstros from Guia de Campanhas: Ermos and Livro Basico III: Monstros e Inimigos
 
@@ -14,26 +14,30 @@ def get_encounter(local, difficulty, level):
         _string_: _generate encounter basead in args_
     """ 
     try:
-        exceptions = ['animais', 'qualquer', 'extraplanar', 'humano']
+        exceptions = ['qualquer', 'extraplanar', 'humano']
         not_have_exception = True
         monster = ''
         min_m = '0'
         
         for item in exceptions:
-            if item == local:
-                not_have_exception = False
-                break
+            if isanimal == False:
+                if item == local:
+                    not_have_exception = False
+                    break
         
+        # Get result if not have exceptions
         if not_have_exception:
             resultado = get_encounter_result(local, difficulty, level)
             monster, min_m, max_m = resultado
-
         
-        #treatament for animals
-        if monster == 'animais' or local == 'animais':
-            resultado = get_encounter_result('animais', difficulty, level)
+        #treatament for "Animais" type
+        if monster == 'animais':
+            resultado = get_encounter_result(local, difficulty, level, True)
             monster, min_m, max_m = resultado
-
+            
+        if isanimal == True:
+            resultado = get_encounter_result(local, difficulty, level, True)
+            monster, min_m, max_m = resultado
         
         #treatament for "Qualquer" type 
         if monster == 'qualquer' or local == 'qualquer':
@@ -63,6 +67,7 @@ def get_encounter(local, difficulty, level):
                 resultado = get_encounter_result('humano', difficulty, 'especial')
                 monster, min_m, max_m = resultado
 
+        #Return if not have any exception
         return f'Foi encontrado {roll(min_m, max_m)} {monster.capitalize()}.'
 
     except Exception as error:
@@ -122,4 +127,3 @@ def test_encounter(local, difficulty, level, danger):
         print(error.args)
         print(error)
         return 'Houve um Erro'
-    
