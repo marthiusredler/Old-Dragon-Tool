@@ -11,7 +11,6 @@ def get_action_result(local: str, action: str):
 		'forragear': '1 Ponto de Jornada.', 
 		'caçar': '2 Ponto de Jornada', 
 		'pescar': '1 Ponto de Jornada', 
-		'forragear': '1 Ponto de Jornada', 
 	}
     
     entry_cost = {
