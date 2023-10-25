@@ -153,7 +153,7 @@ QPushButton::pressed{
           </font>
          </property>
          <property name="text">
-          <string>@OldDragon 2ª Edição</string>
+          <string>@marthiusredler</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -257,7 +257,7 @@ QFrame{
               <enum>QTabWidget::Rounded</enum>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>2</number>
              </property>
              <property name="elideMode">
               <enum>Qt::ElideNone</enum>
@@ -639,6 +639,9 @@ Perigos Naturais: 1 Ponto de Jornada.</string>
                           <property name="wordWrap">
                            <bool>true</bool>
                           </property>
+                          <property name="indent">
+                           <number>9</number>
+                          </property>
                          </widget>
                         </item>
                        </layout>
@@ -654,7 +657,7 @@ Perigos Naturais: 1 Ponto de Jornada.</string>
              </widget>
              <widget class="QWidget" name="tab_2">
               <attribute name="title">
-               <string>Navegação</string>
+               <string>Navegação e Acampamento</string>
               </attribute>
               <layout class="QGridLayout" name="gridLayout_36">
                <item row="0" column="0">
@@ -746,22 +749,8 @@ Perigos Naturais: 1 Ponto de Jornada.</string>
                     <property name="frameShadow">
                      <enum>QFrame::Raised</enum>
                     </property>
-                    <layout class="QGridLayout" name="gridLayout_34">
-                     <item row="2" column="0">
-                      <widget class="QLabel" name="label_16">
-                       <property name="text">
-                        <string>Situacional</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="0" column="0">
-                      <widget class="QLabel" name="label_14">
-                       <property name="text">
-                        <string>Local</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="1" column="0">
+                    <layout class="QGridLayout" name="gridLayout_44">
+                     <item row="1" column="0" colspan="2">
                       <widget class="QFrame" name="frame_15">
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
@@ -822,7 +811,7 @@ Perigos Naturais: 1 Ponto de Jornada.</string>
                        </layout>
                       </widget>
                      </item>
-                     <item row="3" column="0">
+                     <item row="3" column="0" colspan="2">
                       <widget class="QFrame" name="frame_17">
                        <property name="frameShape">
                         <enum>QFrame::StyledPanel</enum>
@@ -858,7 +847,7 @@ Perigos Naturais: 1 Ponto de Jornada.</string>
                        </layout>
                       </widget>
                      </item>
-                     <item row="5" column="0">
+                     <item row="8" column="0" colspan="2">
                       <widget class="QFrame" name="frame_16">
                        <property name="minimumSize">
                         <size>
@@ -951,8 +940,405 @@ QPushButton::pressed{
                        </layout>
                       </widget>
                      </item>
-                     <item row="4" column="0">
+                     <item row="5" column="0" rowspan="2" colspan="2">
+                      <widget class="QFrame" name="frame_25">
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton{
+	color: rgb(242, 242, 241);
+	background-color: rgb(68, 68, 67);
+	font: 10pt &quot;Consolas&quot;;
+	border-radius: 5px
+}
+
+QPushButton::hover{
+	background-color: rgb(185, 38, 64);
+	font: bold 10pt &quot;Consolas&quot;;
+}
+
+QPushButton::pressed{
+	background-color: rgb(230, 35, 43);
+	font: bold 10pt &quot;Consolas&quot;;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_34">
+                        <item row="0" column="0">
+                         <widget class="QLabel" name="label_12">
+                          <property name="text">
+                           <string>Realizar Teste de Acampamento:</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="1">
+                         <widget class="QPushButton" name="pushButton_12">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="sizeIncrement">
+                           <size>
+                            <width>0</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string>Gerar</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item row="0" column="0" colspan="2">
+                      <widget class="QLabel" name="label_14">
+                       <property name="text">
+                        <string>Local</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0" colspan="2">
+                      <widget class="QLabel" name="label_16">
+                       <property name="text">
+                        <string>Situacional</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0" colspan="2">
+                      <widget class="QLabel" name="label_20">
+                       <property name="text">
+                        <string>Acampar:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="7" column="0">
                       <spacer name="verticalSpacer_4">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="tab_3">
+              <attribute name="title">
+               <string>Água e Alimentação</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_43">
+               <item row="0" column="0">
+                <widget class="QFrame" name="frame_19">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_37">
+                  <item row="0" column="1">
+                   <widget class="QFrame" name="frame_20">
+                    <property name="styleSheet">
+                     <string notr="true">QLabel{
+	font: 12pt &quot;Consolas&quot;;
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 5px;
+}</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_38">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_17">
+                       <property name="font">
+                        <font>
+                         <family>Consolas</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Viajar tem o custo: Valor do Hex
+Custo de Pontos para Montanha é de 4 Ponto(s).
+Em trilha: Reduz o Custo em 1.
+Em Estrada: Reduz o Custo em 2.
+Batedor: Aumenta o custo em 1.
+Clima instaveis: Aumenta o custo em 1.
+Viagem Noturna: Aumenta o custo em 1.
+Reorientação: 1 Ponto de Jornada.
+Perigos Naturais: 1 Ponto de Jornada.</string>
+                       </property>
+                       <property name="wordWrap">
+                        <bool>true</bool>
+                       </property>
+                       <property name="indent">
+                        <number>9</number>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QFrame" name="frame_21">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>200</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>300</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_39">
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_18">
+                       <property name="text">
+                        <string>Situacional</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_19">
+                       <property name="text">
+                        <string>Local</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QFrame" name="frame_22">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_40">
+                        <item row="0" column="0">
+                         <widget class="QRadioButton" name="radioButton_24">
+                          <property name="text">
+                           <string>Planicie</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="1">
+                         <widget class="QRadioButton" name="radioButton_25">
+                          <property name="text">
+                           <string>Geleira</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QRadioButton" name="radioButton_26">
+                          <property name="text">
+                           <string>Colina</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1">
+                         <widget class="QRadioButton" name="radioButton_27">
+                          <property name="text">
+                           <string>Pantâno</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="0">
+                         <widget class="QRadioButton" name="radioButton_28">
+                          <property name="text">
+                           <string>Floresta</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="1">
+                         <widget class="QRadioButton" name="radioButton_29">
+                          <property name="text">
+                           <string>Montanha</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="3" column="0">
+                         <widget class="QRadioButton" name="radioButton_30">
+                          <property name="text">
+                           <string>Deserto</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QFrame" name="frame_23">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_41">
+                        <item row="0" column="0">
+                         <widget class="QCheckBox" name="checkBox_4">
+                          <property name="text">
+                           <string>Nevoeiro, tempestade ou nevasca.</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QCheckBox" name="checkBox_5">
+                          <property name="text">
+                           <string>Luz Natural</string>
+                          </property>
+                          <property name="checked">
+                           <bool>true</bool>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="0">
+                         <widget class="QCheckBox" name="checkBox_6">
+                          <property name="text">
+                           <string>Viajando a Noite</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item row="5" column="0">
+                      <widget class="QFrame" name="frame_24">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton{
+	color: rgb(242, 242, 241);
+	background-color: rgb(68, 68, 67);
+	font: 10pt &quot;Consolas&quot;;
+	border-radius: 5px
+}
+
+QPushButton::hover{
+	background-color: rgb(185, 38, 64);
+	font: bold 10pt &quot;Consolas&quot;;
+}
+
+QPushButton::pressed{
+	background-color: rgb(230, 35, 43);
+	font: bold 10pt &quot;Consolas&quot;;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_42">
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item row="0" column="0">
+                         <widget class="QPushButton" name="pushButton_9">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="sizeIncrement">
+                           <size>
+                            <width>0</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string>Copiar</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="1">
+                         <widget class="QPushButton" name="pushButton_10">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string>Gerar</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="2">
+                         <widget class="QPushButton" name="pushButton_11">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string>Limpar</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <spacer name="verticalSpacer_5">
                        <property name="orientation">
                         <enum>Qt::Vertical</enum>
                        </property>
@@ -2622,6 +3008,14 @@ QPushButton{
           </layout>
          </widget>
          <widget class="QWidget" name="page">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>172</width>
+            <height>598</height>
+           </rect>
+          </property>
           <attribute name="label">
            <string>Sobre</string>
           </attribute>
@@ -2719,12 +3113,12 @@ QPushButton{
   </connection>
  </connections>
  <buttongroups>
+  <buttongroup name="buttonGroup_5"/>
+  <buttongroup name="buttonGroup_3"/>
+  <buttongroup name="buttonGroup"/>
   <buttongroup name="buttonGroup_2"/>
   <buttongroup name="buttonGroup_7"/>
-  <buttongroup name="buttonGroup_4"/>
-  <buttongroup name="buttonGroup"/>
-  <buttongroup name="buttonGroup_3"/>
   <buttongroup name="buttonGroup_6"/>
-  <buttongroup name="buttonGroup_5"/>
+  <buttongroup name="buttonGroup_4"/>
  </buttongroups>
 </ui>
