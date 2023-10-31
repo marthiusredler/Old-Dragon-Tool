@@ -257,7 +257,7 @@ QFrame{
               <enum>QTabWidget::Rounded</enum>
              </property>
              <property name="currentIndex">
-              <number>2</number>
+              <number>1</number>
              </property>
              <property name="elideMode">
               <enum>Qt::ElideNone</enum>
@@ -2821,7 +2821,7 @@ QToolBox{
 QToolBox::tab{
 	color: rgb(242, 242, 241);
 	border: None;
-	border-radius: none;
+	border-radius: 3px;
 	background-color: rgb(81, 81, 80);
 	font-align: center;
 }
@@ -3113,12 +3113,12 @@ QPushButton{
   </connection>
  </connections>
  <buttongroups>
-  <buttongroup name="buttonGroup_5"/>
-  <buttongroup name="buttonGroup_3"/>
-  <buttongroup name="buttonGroup"/>
-  <buttongroup name="buttonGroup_2"/>
-  <buttongroup name="buttonGroup_7"/>
   <buttongroup name="buttonGroup_6"/>
+  <buttongroup name="buttonGroup_5"/>
+  <buttongroup name="buttonGroup"/>
+  <buttongroup name="buttonGroup_7"/>
+  <buttongroup name="buttonGroup_3"/>
   <buttongroup name="buttonGroup_4"/>
+  <buttongroup name="buttonGroup_2"/>
  </buttongroups>
 </ui>
