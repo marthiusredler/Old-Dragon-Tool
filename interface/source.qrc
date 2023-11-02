@@ -1,5 +1,15 @@
 <RCC>
   <qresource prefix="img">
     <file>img/logo.png</file>
+    <file>img/checkbutton_checked.png</file>
+    <file>img/checkbutton_checked_hover.png</file>
+    <file>img/checkbutton_unchecked.png</file>
+    <file>img/checkbutton_unchecked_pressed.png</file>
+    <file>img/radiobutton_checked.png</file>
+    <file>img/radiobutton_checked_hover.png</file>
+    <file>img/radiobutton_checked_pressed.png</file>
+    <file>img/radiobutton_unchecked.png</file>
+    <file>img/radiobutton_unchecked_hover.png</file>
+    <file>img/radiobutton_unchecked_pressed.png</file>
   </qresource>
 </RCC>
