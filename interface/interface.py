@@ -2198,7 +2198,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.btn_superior.setText(_translate("MainWindow", "Old Dragon Tool"))
-        self.texto_inferior.setText(_translate("MainWindow", "@marthiusredler"))
+        self.texto_inferior.setText(_translate("MainWindow", "@marthiusredler | 1.0.0-alpha"))
         self.pjRadioButton_planicie.setText(_translate("MainWindow", "Planicie"))
         self.pjRadioButton_geleira.setText(_translate("MainWindow", "Geleira"))
         self.pjRadioButton_colina.setText(_translate("MainWindow", "Colina"))
