@@ -86,6 +86,7 @@ QCheckBox::indicator:checked:pressed {
    <property name="styleSheet">
     <string notr="true">QWidget#centralwidget, QFrame#barra_superior, QFrame#barra_inferior, QFrame#janela_central{
 	border-right: 2px outset rgb(185, 38, 64);
+	border-left: 2px outset rgb(185, 38, 64);
 }
 </string>
    </property>
@@ -252,14 +253,14 @@ QPushButton::pressed{
           <enum>QFrame::Sunken</enum>
          </property>
          <property name="currentIndex">
-          <number>2</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="page_0">
           <layout class="QGridLayout" name="gridLayout_11">
            <item row="0" column="0">
             <widget class="QFrame" name="frame">
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(242, 242, 241);</string>
+              <string notr="true"/>
              </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
@@ -267,6 +268,24 @@ QPushButton::pressed{
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
+             <layout class="QGridLayout" name="gridLayout_23">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_11">
+                <property name="maximumSize">
+                 <size>
+                  <width>500</width>
+                  <height>500</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">image: url(:/img/img/logo_main_menu.png);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
@@ -324,7 +343,7 @@ QFrame{
               <enum>QTabWidget::Rounded</enum>
              </property>
              <property name="currentIndex">
-              <number>2</number>
+              <number>0</number>
              </property>
              <property name="elideMode">
               <enum>Qt::ElideNone</enum>
@@ -447,7 +466,7 @@ QFrame{
                             <number>3</number>
                            </property>
                            <item row="0" column="0">
-                            <widget class="QRadioButton" name="radioButton_10">
+                            <widget class="QRadioButton" name="pjRadioButton_planicie">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -460,7 +479,7 @@ QFrame{
                             </widget>
                            </item>
                            <item row="0" column="1">
-                            <widget class="QRadioButton" name="radioButton_11">
+                            <widget class="QRadioButton" name="pjRadioButton_geleira">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -470,7 +489,7 @@ QFrame{
                             </widget>
                            </item>
                            <item row="1" column="0">
-                            <widget class="QRadioButton" name="radioButton_14">
+                            <widget class="QRadioButton" name="pjRadioButton_colina">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -480,7 +499,7 @@ QFrame{
                             </widget>
                            </item>
                            <item row="1" column="1">
-                            <widget class="QRadioButton" name="radioButton_13">
+                            <widget class="QRadioButton" name="pjRadioButton_pantano">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -490,7 +509,7 @@ QFrame{
                             </widget>
                            </item>
                            <item row="2" column="0">
-                            <widget class="QRadioButton" name="radioButton_12">
+                            <widget class="QRadioButton" name="pjRadioButton_floresta">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -500,7 +519,7 @@ QFrame{
                             </widget>
                            </item>
                            <item row="2" column="1">
-                            <widget class="QRadioButton" name="radioButton_15">
+                            <widget class="QRadioButton" name="pjRadioButton_montanha">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -510,7 +529,7 @@ QFrame{
                             </widget>
                            </item>
                            <item row="3" column="0">
-                            <widget class="QRadioButton" name="radioButton_16">
+                            <widget class="QRadioButton" name="pjRadioButton_deserto">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -568,7 +587,7 @@ QPushButton::pressed{
                             <number>0</number>
                            </property>
                            <item row="0" column="0">
-                            <widget class="QPushButton" name="pushButton">
+                            <widget class="QPushButton" name="pjPushButton_copiar">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -584,13 +603,16 @@ QPushButton::pressed{
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
+                             <property name="toolTip">
+                              <string>&lt;p&gt;Copia para a Área de Transferencia o Resultado Gerado!&lt;/p&gt;</string>
+                             </property>
                              <property name="text">
                               <string>Copiar</string>
                              </property>
                             </widget>
                            </item>
                            <item row="0" column="1">
-                            <widget class="QPushButton" name="pushButton_2">
+                            <widget class="QPushButton" name="pjPushButton_gerar">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -599,6 +621,9 @@ QPushButton::pressed{
                              </property>
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="toolTip">
+                              <string>&lt;p&gt;Gera o Resultado!&lt;/p&gt;</string>
                              </property>
                              <property name="text">
                               <string>Gerar</string>
@@ -606,7 +631,7 @@ QPushButton::pressed{
                             </widget>
                            </item>
                            <item row="0" column="2">
-                            <widget class="QPushButton" name="pushButton_3">
+                            <widget class="QPushButton" name="pjPushButton_limpar">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -615,6 +640,9 @@ QPushButton::pressed{
                              </property>
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="toolTip">
+                              <string>&lt;p&gt;Limpa o Resultado Gerado!&lt;/p&gt;</string>
                              </property>
                              <property name="text">
                               <string>Limpar</string>
@@ -640,7 +668,7 @@ QPushButton::pressed{
                             <number>3</number>
                            </property>
                            <item row="0" column="0">
-                            <widget class="QRadioButton" name="radioButton">
+                            <widget class="QRadioButton" name="pjRadioButton_viajar">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -653,7 +681,7 @@ QPushButton::pressed{
                             </widget>
                            </item>
                            <item row="0" column="1">
-                            <widget class="QRadioButton" name="radioButton_2">
+                            <widget class="QRadioButton" name="pjRadioButton_descansar">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -663,7 +691,7 @@ QPushButton::pressed{
                             </widget>
                            </item>
                            <item row="1" column="1">
-                            <widget class="QRadioButton" name="radioButton_5">
+                            <widget class="QRadioButton" name="pjRadioButton_acampar">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -673,7 +701,7 @@ QPushButton::pressed{
                             </widget>
                            </item>
                            <item row="1" column="0">
-                            <widget class="QRadioButton" name="radioButton_4">
+                            <widget class="QRadioButton" name="pjRadioButton_marchar">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -683,7 +711,7 @@ QPushButton::pressed{
                             </widget>
                            </item>
                            <item row="2" column="1">
-                            <widget class="QRadioButton" name="radioButton_8">
+                            <widget class="QRadioButton" name="pjRadioButton_forragear">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -693,7 +721,7 @@ QPushButton::pressed{
                             </widget>
                            </item>
                            <item row="2" column="0">
-                            <widget class="QRadioButton" name="radioButton_7">
+                            <widget class="QRadioButton" name="pjRadioButton_explorar">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -703,7 +731,7 @@ QPushButton::pressed{
                             </widget>
                            </item>
                            <item row="3" column="0">
-                            <widget class="QRadioButton" name="radioButton_6">
+                            <widget class="QRadioButton" name="pjRadioButton_pescar">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -713,7 +741,7 @@ QPushButton::pressed{
                             </widget>
                            </item>
                            <item row="3" column="1">
-                            <widget class="QRadioButton" name="radioButton_3">
+                            <widget class="QRadioButton" name="pjRadioButton_cacar">
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
@@ -866,13 +894,13 @@ QScrollBar::handle:pressed {
                             <rect>
                              <x>0</x>
                              <y>0</y>
-                             <width>145</width>
-                             <height>713</height>
+                             <width>293</width>
+                             <height>407</height>
                             </rect>
                            </property>
                            <layout class="QGridLayout" name="gridLayout_45">
                             <item row="0" column="0">
-                             <widget class="QLabel" name="label_9">
+                             <widget class="QLabel" name="pjLabel_result">
                               <property name="sizePolicy">
                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                                 <horstretch>0</horstretch>
@@ -889,7 +917,7 @@ QScrollBar::handle:pressed {
                                </font>
                               </property>
                               <property name="text">
-                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Viajar tem o custo: Valor do Hex&lt;/p&gt;&lt;p&gt;Custo de Pontos para Montanha é de 4 Ponto(s).&lt;/p&gt;&lt;p&gt;Em trilha: Reduz o Custo em 1.&lt;/p&gt;&lt;p&gt;Em Estrada: Reduz o Custo em 2.&lt;/p&gt;&lt;p&gt;Batedor: Aumenta o custo em 1.&lt;/p&gt;&lt;p&gt;Clima instaveis: Aumenta o custo em 1.&lt;/p&gt;&lt;p&gt;Viagem Noturna: Aumenta o custo em 1.&lt;/p&gt;&lt;p&gt;Reorientação: 1 Ponto de Jornada.&lt;/p&gt;&lt;p&gt;Perigos Naturais: 1 Ponto de Jornada.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Escolha as opções e clique em gerar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                               </property>
                               <property name="alignment">
                                <set>Qt::AlignCenter</set>
@@ -984,7 +1012,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_35">
                      <item row="0" column="0">
-                      <widget class="QLabel" name="label_15">
+                      <widget class="QLabel" name="naLabel_result">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1001,7 +1029,7 @@ background-color: rgb(255, 255, 255);</string>
                         </font>
                        </property>
                        <property name="text">
-                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seguem para direção Desejada. - 🡡&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Escolha as opções e clique em gerar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -1026,7 +1054,7 @@ background-color: rgb(255, 255, 255);</string>
                      <bool>true</bool>
                     </property>
                     <property name="sizePolicy">
-                     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
@@ -1082,7 +1110,7 @@ background-color: rgb(255, 255, 255);</string>
                          <number>3</number>
                         </property>
                         <item row="1" column="0">
-                         <widget class="QCheckBox" name="checkBox">
+                         <widget class="QCheckBox" name="naCheckBox_nevoeiro">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                             <horstretch>0</horstretch>
@@ -1105,7 +1133,7 @@ ou nevasca.</string>
                          </widget>
                         </item>
                         <item row="3" column="0">
-                         <widget class="QCheckBox" name="checkBox_3">
+                         <widget class="QCheckBox" name="naCheckBox_viajando">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1121,7 +1149,7 @@ ou nevasca.</string>
                          </widget>
                         </item>
                         <item row="0" column="0">
-                         <widget class="QCheckBox" name="checkBox_2">
+                         <widget class="QCheckBox" name="naCheckBox_luz">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1164,7 +1192,7 @@ ou nevasca.</string>
                          <number>3</number>
                         </property>
                         <item row="0" column="0">
-                         <widget class="QRadioButton" name="radioButton_17">
+                         <widget class="QRadioButton" name="naRadioButton_planicie">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1183,7 +1211,7 @@ ou nevasca.</string>
                          </widget>
                         </item>
                         <item row="0" column="1">
-                         <widget class="QRadioButton" name="radioButton_18">
+                         <widget class="QRadioButton" name="naRadioButton_geleira">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1199,7 +1227,7 @@ ou nevasca.</string>
                          </widget>
                         </item>
                         <item row="1" column="0">
-                         <widget class="QRadioButton" name="radioButton_19">
+                         <widget class="QRadioButton" name="naRadioButton_colina">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1215,7 +1243,7 @@ ou nevasca.</string>
                          </widget>
                         </item>
                         <item row="1" column="1">
-                         <widget class="QRadioButton" name="radioButton_20">
+                         <widget class="QRadioButton" name="naRadioButton_pantano">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1231,7 +1259,7 @@ ou nevasca.</string>
                          </widget>
                         </item>
                         <item row="2" column="0">
-                         <widget class="QRadioButton" name="radioButton_21">
+                         <widget class="QRadioButton" name="naRadioButton_floresta">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1247,7 +1275,7 @@ ou nevasca.</string>
                          </widget>
                         </item>
                         <item row="2" column="1">
-                         <widget class="QRadioButton" name="radioButton_22">
+                         <widget class="QRadioButton" name="naRadioButton_montanha">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1263,7 +1291,7 @@ ou nevasca.</string>
                          </widget>
                         </item>
                         <item row="3" column="0">
-                         <widget class="QRadioButton" name="radioButton_23">
+                         <widget class="QRadioButton" name="naRadioButton_deserto">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1283,6 +1311,9 @@ ou nevasca.</string>
                      </item>
                      <item row="5" column="0" rowspan="2" colspan="2">
                       <widget class="QFrame" name="frame_25">
+                       <property name="toolTip">
+                        <string>Verifica o Tipo do Acampamento. Se será &lt;b&gt;Seguro&lt;/b&gt;, &lt;b&gt;Normal&lt;/b&gt; ou &lt;b&gt;Perigoso&lt;/b&gt;, e se haverá &lt;b&gt;Encontro&lt;/b&gt;, &lt;b&gt;Ocorrência&lt;/b&gt; ou &lt;b&gt;Nada Acontece&lt;/b&gt;.</string>
+                       </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton{
 	color: rgb(242, 242, 241);
@@ -1316,6 +1347,9 @@ QPushButton::pressed{
                             <height>16777215</height>
                            </size>
                           </property>
+                          <property name="toolTip">
+                           <string/>
+                          </property>
                           <property name="styleSheet">
                            <string notr="true">QLabel{
 	font: 10pt &quot;Consolas&quot;;
@@ -1334,7 +1368,7 @@ QPushButton::pressed{
                          </widget>
                         </item>
                         <item row="0" column="1">
-                         <widget class="QPushButton" name="pushButton_12">
+                         <widget class="QPushButton" name="naPushButton_gerarAcampamento">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1443,7 +1477,7 @@ QPushButton::pressed{
                          <number>0</number>
                         </property>
                         <item row="0" column="0">
-                         <widget class="QPushButton" name="pushButton_4">
+                         <widget class="QPushButton" name="naPushButton_copiar">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1465,13 +1499,16 @@ QPushButton::pressed{
                           <property name="cursor">
                            <cursorShape>PointingHandCursor</cursorShape>
                           </property>
+                          <property name="toolTip">
+                           <string>&lt;p&gt;Copia para a Área de Transferencia o Resultado Gerado!&lt;/p&gt;</string>
+                          </property>
                           <property name="text">
                            <string>Copiar</string>
                           </property>
                          </widget>
                         </item>
                         <item row="0" column="1">
-                         <widget class="QPushButton" name="pushButton_7">
+                         <widget class="QPushButton" name="naPushButton_gerar">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1486,6 +1523,9 @@ QPushButton::pressed{
                           </property>
                           <property name="cursor">
                            <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
+                          <property name="toolTip">
+                           <string>&lt;p&gt;Gera o Resultado!&lt;/p&gt;</string>
                           </property>
                           <property name="text">
                            <string>Gerar</string>
@@ -1493,7 +1533,7 @@ QPushButton::pressed{
                          </widget>
                         </item>
                         <item row="0" column="2">
-                         <widget class="QPushButton" name="pushButton_8">
+                         <widget class="QPushButton" name="naPushButton_limpar">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -1508,6 +1548,9 @@ QPushButton::pressed{
                           </property>
                           <property name="cursor">
                            <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
+                          <property name="toolTip">
+                           <string>&lt;p&gt;Limpa o Resultado Gerado!&lt;/p&gt;</string>
                           </property>
                           <property name="text">
                            <string>Limpar</string>
@@ -1596,7 +1639,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_38">
                      <item row="0" column="0">
-                      <widget class="QLabel" name="label_17">
+                      <widget class="QLabel" name="aaLabel_result">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1613,7 +1656,7 @@ background-color: rgb(255, 255, 255);</string>
                         </font>
                        </property>
                        <property name="text">
-                        <string>Foi encontrado Água Potavel no Local.</string>
+                        <string>Escolha as opções e clique em gerar.</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -1763,6 +1806,12 @@ QScrollBar::handle:pressed {
                         </property>
                         <item row="0" column="0">
                          <widget class="QScrollArea" name="scrollArea_2">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
                           <property name="layoutDirection">
                            <enum>Qt::LeftToRight</enum>
                           </property>
@@ -1826,7 +1875,7 @@ QSpinBox {
                                 <number>3</number>
                                </property>
                                <item row="0" column="1">
-                                <widget class="QRadioButton" name="radioButton_64">
+                                <widget class="QRadioButton" name="aaRadioButton_geleira">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -1842,7 +1891,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="3" column="1">
-                                <widget class="QRadioButton" name="radioButton_62">
+                                <widget class="QRadioButton" name="aaRadioButton_oceano">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -1858,7 +1907,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="2" column="1">
-                                <widget class="QRadioButton" name="radioButton_65">
+                                <widget class="QRadioButton" name="aaRadioButton_montanha">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -1874,7 +1923,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="0" column="0">
-                                <widget class="QRadioButton" name="radioButton_63">
+                                <widget class="QRadioButton" name="aaRadioButton_planicie">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -1893,7 +1942,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="1" column="1">
-                                <widget class="QRadioButton" name="radioButton_67">
+                                <widget class="QRadioButton" name="aaRadioButton_pantano">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -1909,7 +1958,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="1" column="0">
-                                <widget class="QRadioButton" name="radioButton_66">
+                                <widget class="QRadioButton" name="aaRadioButton_colina">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -1925,7 +1974,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="2" column="0">
-                                <widget class="QRadioButton" name="radioButton_68">
+                                <widget class="QRadioButton" name="aaRadioButton_floresta">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -1941,7 +1990,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="3" column="0">
-                                <widget class="QRadioButton" name="radioButton_69">
+                                <widget class="QRadioButton" name="aaRadioButton_deserto">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -1978,7 +2027,7 @@ QSpinBox {
                                 <number>3</number>
                                </property>
                                <item row="0" column="1" colspan="2">
-                                <widget class="QRadioButton" name="radioButton_74">
+                                <widget class="QRadioButton" name="aaRadioButton_outono">
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
@@ -1988,7 +2037,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="1" column="1">
-                                <widget class="QRadioButton" name="radioButton_75">
+                                <widget class="QRadioButton" name="aaRadioButton_verao">
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
@@ -1998,7 +2047,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="0" column="0">
-                                <widget class="QRadioButton" name="radioButton_73">
+                                <widget class="QRadioButton" name="aaRadioButton_primavera">
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
@@ -2011,7 +2060,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="1" column="0">
-                                <widget class="QRadioButton" name="radioButton_76">
+                                <widget class="QRadioButton" name="aaRadioButton_inverno">
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
@@ -2037,6 +2086,9 @@ QSpinBox {
                               <layout class="QGridLayout" name="gridLayout_58">
                                <item row="0" column="0">
                                 <widget class="QLabel" name="label_23">
+                                 <property name="toolTip">
+                                  <string>Pontos da Habilidade &lt;b&gt;Rastrear&lt;/b&gt; do Ranger</string>
+                                 </property>
                                  <property name="styleSheet">
                                   <string notr="true">QLabel{
 	font: 10pt &quot;Consolas&quot;;
@@ -2044,12 +2096,12 @@ QSpinBox {
 }</string>
                                  </property>
                                  <property name="text">
-                                  <string>Pontos de Ranger:</string>
+                                  <string>Pontos de Rastrear:</string>
                                  </property>
                                 </widget>
                                </item>
                                <item row="0" column="2">
-                                <widget class="QSpinBox" name="spinBox">
+                                <widget class="QSpinBox" name="aaSpinBox_pontos">
                                  <property name="font">
                                   <font>
                                    <family>Consolas</family>
@@ -2081,9 +2133,12 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="1" column="0" colspan="3">
-                                <widget class="QCheckBox" name="checkBox_4">
+                                <widget class="QCheckBox" name="aaCheckBox_pessoas">
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
+                                 <property name="toolTip">
+                                  <string>Afeta Exclusivamente a Chance e Resultado da Caça.</string>
                                  </property>
                                  <property name="text">
                                   <string>Mais de Uma Pessoa?</string>
@@ -2122,7 +2177,7 @@ QSpinBox {
                                 <number>3</number>
                                </property>
                                <item row="0" column="0">
-                                <widget class="QRadioButton" name="radioButton_70">
+                                <widget class="QRadioButton" name="aaRadioButton_polar">
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
@@ -2132,7 +2187,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="2" column="0">
-                                <widget class="QRadioButton" name="radioButton_72">
+                                <widget class="QRadioButton" name="aaRadioButton_tropical">
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
@@ -2142,7 +2197,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="1" column="0">
-                                <widget class="QRadioButton" name="radioButton_71">
+                                <widget class="QRadioButton" name="aaRadioButton_temperado">
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
@@ -2173,7 +2228,7 @@ QSpinBox {
                                 <number>0</number>
                                </property>
                                <item row="0" column="0">
-                                <widget class="QRadioButton" name="radioButton_59">
+                                <widget class="QRadioButton" name="aaRadioButton_agua">
                                  <property name="maximumSize">
                                   <size>
                                    <width>60</width>
@@ -2182,6 +2237,9 @@ QSpinBox {
                                  </property>
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
+                                 <property name="toolTip">
+                                  <string>Buscar Água exige 01(Um) Ponto de Jornada. &lt;b&gt;A Chance de Sucesso&lt;/b&gt; é afetada pelos pontos de rastrear de um Ranger. &lt;br&gt;Geleiras &lt;b&gt;sempre&lt;/b&gt; será um sucesso.&lt;/br&gt;</string>
                                  </property>
                                  <property name="text">
                                   <string>Água</string>
@@ -2192,7 +2250,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="0" column="2">
-                                <widget class="QRadioButton" name="radioButton_60">
+                                <widget class="QRadioButton" name="aaRadioButton_cacar">
                                  <property name="maximumSize">
                                   <size>
                                    <width>60</width>
@@ -2202,13 +2260,16 @@ QSpinBox {
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
+                                 <property name="toolTip">
+                                  <string>Caçar exige 01(Um) Ponto de Jornada. &lt;b&gt;A Quantidade de Rações e Chance de Sucesso&lt;/b&gt; é afetada pelos pontos de rastrear de um Ranger e haver mais Pessoas realizando.</string>
+                                 </property>
                                  <property name="text">
                                   <string>Caça</string>
                                  </property>
                                 </widget>
                                </item>
                                <item row="0" column="1">
-                                <widget class="QRadioButton" name="radioButton_61">
+                                <widget class="QRadioButton" name="aaRadioButton_foragear">
                                  <property name="maximumSize">
                                   <size>
                                    <width>80</width>
@@ -2217,6 +2278,12 @@ QSpinBox {
                                  </property>
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
+                                 <property name="toolTip">
+                                  <string>Forragear exige 01(Um) Ponto de Jornada. &lt;b&gt;A Quantidade de Rações e a Chance de Sucesso&lt;/b&gt; é afetada pelos pontos de rastrear de um Ranger.</string>
+                                 </property>
+                                 <property name="accessibleName">
+                                  <string/>
                                  </property>
                                  <property name="text">
                                   <string>Foragear</string>
@@ -2335,7 +2402,7 @@ QPushButton::pressed{
                             <number>0</number>
                            </property>
                            <item row="0" column="0">
-                            <widget class="QPushButton" name="pushButton_9">
+                            <widget class="QPushButton" name="aaPushButton_copiar">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -2357,13 +2424,16 @@ QPushButton::pressed{
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
+                             <property name="toolTip">
+                              <string>&lt;p&gt;Copia para a Área de Transferencia o Resultado Gerado!&lt;/p&gt;</string>
+                             </property>
                              <property name="text">
                               <string>Copiar</string>
                              </property>
                             </widget>
                            </item>
                            <item row="0" column="1">
-                            <widget class="QPushButton" name="pushButton_10">
+                            <widget class="QPushButton" name="aaPushButton_gerar">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -2378,6 +2448,9 @@ QPushButton::pressed{
                              </property>
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="toolTip">
+                              <string>&lt;p&gt;Gera o Resultado!&lt;/p&gt;</string>
                              </property>
                              <property name="text">
                               <string>Gerar</string>
@@ -2385,7 +2458,7 @@ QPushButton::pressed{
                             </widget>
                            </item>
                            <item row="0" column="2">
-                            <widget class="QPushButton" name="pushButton_11">
+                            <widget class="QPushButton" name="aaPushButton_limpar">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -2400,6 +2473,9 @@ QPushButton::pressed{
                              </property>
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="toolTip">
+                              <string>&lt;p&gt;Limpa o Resultado Gerado!&lt;/p&gt;</string>
                              </property>
                              <property name="text">
                               <string>Limpar</string>
@@ -2427,7 +2503,7 @@ QPushButton::pressed{
          <widget class="QWidget" name="page_2">
           <layout class="QGridLayout" name="gridLayout_21">
            <item row="0" column="0">
-            <widget class="QTabWidget" name="tabWidget_1">
+            <widget class="QTabWidget" name="etRadioButton_planicie">
              <property name="font">
               <font>
                <family>Consolas</family>
@@ -2550,7 +2626,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_47">
                      <item row="0" column="0">
-                      <widget class="QLabel" name="label_24">
+                      <widget class="QLabel" name="eeLabel_result">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2567,7 +2643,7 @@ background-color: rgb(255, 255, 255);</string>
                         </font>
                        </property>
                        <property name="text">
-                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Seguem para direção Desejada. - 🡡&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Escolha as opções e clique em gerar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -2592,7 +2668,7 @@ background-color: rgb(255, 255, 255);</string>
                      <bool>true</bool>
                     </property>
                     <property name="sizePolicy">
-                     <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
@@ -2647,7 +2723,11 @@ background-color: rgb(255, 255, 255);</string>
                        </property>
                        <layout class="QGridLayout" name="gridLayout_17">
                         <item row="0" column="0">
-                         <widget class="QRadioButton" name="radioButton_40">
+                         <widget class="QRadioButton" name="eeRadioButton_iniciante">
+                          <property name="toolTip">
+                           <string>Para Personagens de &lt;b&gt;1ͦ a 2ͦ Nível&lt;/b&gt;
+</string>
+                          </property>
                           <property name="text">
                            <string>Iniciante</string>
                           </property>
@@ -2657,14 +2737,22 @@ background-color: rgb(255, 255, 255);</string>
                          </widget>
                         </item>
                         <item row="1" column="0">
-                         <widget class="QRadioButton" name="radioButton_41">
+                         <widget class="QRadioButton" name="eeRadioButton_heroico">
+                          <property name="toolTip">
+                           <string>Para Personagens de &lt;b&gt;3ͦ a 5ͦ Nível&lt;/b&gt;
+</string>
+                          </property>
                           <property name="text">
                            <string>Heroico</string>
                           </property>
                          </widget>
                         </item>
                         <item row="2" column="0">
-                         <widget class="QRadioButton" name="radioButton_42">
+                         <widget class="QRadioButton" name="eeRadioButton_avancado">
+                          <property name="toolTip">
+                           <string>Para Personagens a partir do &lt;b&gt;6ͦ Nível&lt;/b&gt;
+</string>
+                          </property>
                           <property name="text">
                            <string>Avançado</string>
                           </property>
@@ -2697,7 +2785,7 @@ background-color: rgb(255, 255, 255);</string>
                        </property>
                        <layout class="QGridLayout" name="gridLayout_15">
                         <item row="0" column="0">
-                         <widget class="QRadioButton" name="radioButton_9">
+                         <widget class="QRadioButton" name="eeRadioButton_facil">
                           <property name="text">
                            <string>Fácil</string>
                           </property>
@@ -2707,14 +2795,14 @@ background-color: rgb(255, 255, 255);</string>
                          </widget>
                         </item>
                         <item row="1" column="0">
-                         <widget class="QRadioButton" name="radioButton_38">
+                         <widget class="QRadioButton" name="eeRadioButton_mediano">
                           <property name="text">
                            <string>Mediano</string>
                           </property>
                          </widget>
                         </item>
                         <item row="2" column="0">
-                         <widget class="QRadioButton" name="radioButton_39">
+                         <widget class="QRadioButton" name="eeRadioButton_desafiador">
                           <property name="text">
                            <string>Desafiador</string>
                           </property>
@@ -2742,7 +2830,7 @@ background-color: rgb(255, 255, 255);</string>
                          <number>6</number>
                         </property>
                         <item row="0" column="0">
-                         <widget class="QRadioButton" name="radioButton_24">
+                         <widget class="QRadioButton" name="eeRadioButton_planicie">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -2761,7 +2849,7 @@ background-color: rgb(255, 255, 255);</string>
                          </widget>
                         </item>
                         <item row="0" column="1">
-                         <widget class="QRadioButton" name="radioButton_25">
+                         <widget class="QRadioButton" name="eeRadioButton_geleira">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -2777,7 +2865,7 @@ background-color: rgb(255, 255, 255);</string>
                          </widget>
                         </item>
                         <item row="1" column="0">
-                         <widget class="QRadioButton" name="radioButton_26">
+                         <widget class="QRadioButton" name="eeRadioButton_colina">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -2793,7 +2881,7 @@ background-color: rgb(255, 255, 255);</string>
                          </widget>
                         </item>
                         <item row="1" column="1">
-                         <widget class="QRadioButton" name="radioButton_27">
+                         <widget class="QRadioButton" name="eeRadioButton_pantano">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -2809,7 +2897,7 @@ background-color: rgb(255, 255, 255);</string>
                          </widget>
                         </item>
                         <item row="2" column="0">
-                         <widget class="QRadioButton" name="radioButton_28">
+                         <widget class="QRadioButton" name="eeRadioButton_floresta">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -2825,7 +2913,7 @@ background-color: rgb(255, 255, 255);</string>
                          </widget>
                         </item>
                         <item row="2" column="1">
-                         <widget class="QRadioButton" name="radioButton_29">
+                         <widget class="QRadioButton" name="eeRadioButton_montanha">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -2841,7 +2929,7 @@ background-color: rgb(255, 255, 255);</string>
                          </widget>
                         </item>
                         <item row="3" column="0">
-                         <widget class="QRadioButton" name="radioButton_30">
+                         <widget class="QRadioButton" name="eeRadioButton_deserto">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -2911,7 +2999,7 @@ QPushButton::pressed{
                          <number>0</number>
                         </property>
                         <item row="0" column="0">
-                         <widget class="QPushButton" name="pushButton_14">
+                         <widget class="QPushButton" name="eePushButton_copiar">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -2933,13 +3021,16 @@ QPushButton::pressed{
                           <property name="cursor">
                            <cursorShape>PointingHandCursor</cursorShape>
                           </property>
+                          <property name="toolTip">
+                           <string>&lt;p&gt;Copia para a Área de Transferencia o Resultado Gerado!&lt;/p&gt;</string>
+                          </property>
                           <property name="text">
                            <string>Copiar</string>
                           </property>
                          </widget>
                         </item>
                         <item row="0" column="1">
-                         <widget class="QPushButton" name="pushButton_15">
+                         <widget class="QPushButton" name="eePushButton_gerar">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -2954,6 +3045,9 @@ QPushButton::pressed{
                           </property>
                           <property name="cursor">
                            <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
+                          <property name="toolTip">
+                           <string>&lt;p&gt;Gera o Resultado!&lt;/p&gt;</string>
                           </property>
                           <property name="text">
                            <string>Gerar</string>
@@ -2961,7 +3055,7 @@ QPushButton::pressed{
                          </widget>
                         </item>
                         <item row="0" column="2">
-                         <widget class="QPushButton" name="pushButton_16">
+                         <widget class="QPushButton" name="eePushButton_limpar">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                             <horstretch>0</horstretch>
@@ -2976,6 +3070,9 @@ QPushButton::pressed{
                           </property>
                           <property name="cursor">
                            <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
+                          <property name="toolTip">
+                           <string>&lt;p&gt;Limpa o Resultado Gerado!&lt;/p&gt;</string>
                           </property>
                           <property name="text">
                            <string>Limpar</string>
@@ -2995,7 +3092,10 @@ QPushButton::pressed{
                        </property>
                        <layout class="QGridLayout" name="gridLayout_18">
                         <item row="0" column="0">
-                         <widget class="QRadioButton" name="radioButton_43">
+                         <widget class="QRadioButton" name="eeRadioButton_normal">
+                          <property name="toolTip">
+                           <string>&lt;p&gt;Poucas chances de Ocorrer Encontro.&lt;/p&gt;</string>
+                          </property>
                           <property name="text">
                            <string>Hex Normal</string>
                           </property>
@@ -3005,14 +3105,20 @@ QPushButton::pressed{
                          </widget>
                         </item>
                         <item row="1" column="0">
-                         <widget class="QRadioButton" name="radioButton_44">
+                         <widget class="QRadioButton" name="eeRadioButton_perigoso">
+                          <property name="toolTip">
+                           <string>&lt;p&gt;Médias chances de Ocorrer Encontro.&lt;/p&gt;</string>
+                          </property>
                           <property name="text">
                            <string>Hex Perigoso</string>
                           </property>
                          </widget>
                         </item>
                         <item row="2" column="0">
-                         <widget class="QRadioButton" name="radioButton_45">
+                         <widget class="QRadioButton" name="eeRadioButton_extremo">
+                          <property name="toolTip">
+                           <string>&lt;p&gt;Maiores chances de Ocorrer Encontro.&lt;/p&gt;</string>
+                          </property>
                           <property name="text">
                            <string>Hex Extremo</string>
                           </property>
@@ -3113,7 +3219,7 @@ background-color: rgb(255, 255, 255);</string>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_49">
                      <item row="0" column="0">
-                      <widget class="QLabel" name="label_26">
+                      <widget class="QLabel" name="etLabel_result">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -3130,7 +3236,7 @@ background-color: rgb(255, 255, 255);</string>
                         </font>
                        </property>
                        <property name="text">
-                        <string>Foi encontrado Água Potavel no Local.</string>
+                        <string>Escolha as opções e clique em gerar.</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -3280,6 +3386,12 @@ QScrollBar::handle:pressed {
                         </property>
                         <item row="0" column="0">
                          <widget class="QScrollArea" name="scrollArea_3">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
                           <property name="layoutDirection">
                            <enum>Qt::LeftToRight</enum>
                           </property>
@@ -3314,7 +3426,7 @@ QSpinBox {
                             <rect>
                              <x>0</x>
                              <y>0</y>
-                             <width>250</width>
+                             <width>231</width>
                              <height>349</height>
                             </rect>
                            </property>
@@ -3382,7 +3494,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="1" column="1">
-                                <widget class="QRadioButton" name="radioButton_77">
+                                <widget class="QRadioButton" name="etRadioButton_geleira">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -3398,7 +3510,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="2" column="0">
-                                <widget class="QRadioButton" name="radioButton_82">
+                                <widget class="QRadioButton" name="etRadioButton_colina">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -3414,7 +3526,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="2" column="1">
-                                <widget class="QRadioButton" name="radioButton_81">
+                                <widget class="QRadioButton" name="etRadioButton_pantano">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -3430,7 +3542,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="3" column="0">
-                                <widget class="QRadioButton" name="radioButton_83">
+                                <widget class="QRadioButton" name="etRadioButton_floresta">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -3446,7 +3558,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="3" column="1">
-                                <widget class="QRadioButton" name="radioButton_79">
+                                <widget class="QRadioButton" name="etRadioButton_montanha">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -3462,7 +3574,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="4" column="0">
-                                <widget class="QRadioButton" name="radioButton_84">
+                                <widget class="QRadioButton" name="etRadioButton_deserto">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -3478,7 +3590,7 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="4" column="1">
-                                <widget class="QRadioButton" name="radioButton_78">
+                                <widget class="QRadioButton" name="etRadioButton_subterraneo">
                                  <property name="sizePolicy">
                                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
@@ -3494,28 +3606,31 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="6" column="0">
-                                <widget class="QRadioButton" name="radioButton_31">
+                                <widget class="QRadioButton" name="etRadioButton_qualquer">
                                  <property name="text">
                                   <string>Qualquer</string>
                                  </property>
                                 </widget>
                                </item>
                                <item row="6" column="1">
-                                <widget class="QRadioButton" name="radioButton_33">
+                                <widget class="QRadioButton" name="etRadioButton_extraplanar">
                                  <property name="text">
                                   <string>Extraplanar</string>
                                  </property>
                                 </widget>
                                </item>
                                <item row="7" column="0">
-                                <widget class="QRadioButton" name="radioButton_34">
+                                <widget class="QRadioButton" name="etRadioButton_humano">
                                  <property name="text">
                                   <string>Humano</string>
                                  </property>
                                 </widget>
                                </item>
                                <item row="7" column="1">
-                                <widget class="QCheckBox" name="checkBox_6">
+                                <widget class="QCheckBox" name="etCheckBox_animais">
+                                 <property name="toolTip">
+                                  <string>&lt;b&gt;Ao Seleciona-ló deve selecionar um dos Biomas Acima!&lt;/b&gt;</string>
+                                 </property>
                                  <property name="text">
                                   <string>Animais</string>
                                  </property>
@@ -3551,7 +3666,7 @@ QSpinBox {
                                 <number>3</number>
                                </property>
                                <item row="0" column="0">
-                                <widget class="QRadioButton" name="radioButton_140">
+                                <widget class="QRadioButton" name="etRadioButton_facil">
                                  <property name="text">
                                   <string>Fácil</string>
                                  </property>
@@ -3561,14 +3676,14 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="1" column="0">
-                                <widget class="QRadioButton" name="radioButton_141">
+                                <widget class="QRadioButton" name="etRadioButton_mediano">
                                  <property name="text">
                                   <string>Mediano</string>
                                  </property>
                                 </widget>
                                </item>
                                <item row="2" column="0">
-                                <widget class="QRadioButton" name="radioButton_142">
+                                <widget class="QRadioButton" name="etRadioButton_desafiador">
                                  <property name="text">
                                   <string>Desafiador</string>
                                  </property>
@@ -3590,7 +3705,10 @@ QSpinBox {
                                 <number>3</number>
                                </property>
                                <item row="0" column="0">
-                                <widget class="QRadioButton" name="radioButton_137">
+                                <widget class="QRadioButton" name="etRadioButton_iniciante">
+                                 <property name="toolTip">
+                                  <string>Para Personagens de &lt;b&gt;1ͦ a 2ͦ Nível&lt;/b&gt;</string>
+                                 </property>
                                  <property name="text">
                                   <string>Iniciante</string>
                                  </property>
@@ -3600,14 +3718,20 @@ QSpinBox {
                                 </widget>
                                </item>
                                <item row="1" column="0">
-                                <widget class="QRadioButton" name="radioButton_138">
+                                <widget class="QRadioButton" name="etRadioButton_heroico">
+                                 <property name="toolTip">
+                                  <string>Para Personagens de &lt;b&gt;3ͦ a 5ͦ Nível&lt;/b&gt;</string>
+                                 </property>
                                  <property name="text">
                                   <string>Heroico</string>
                                  </property>
                                 </widget>
                                </item>
                                <item row="2" column="0">
-                                <widget class="QRadioButton" name="radioButton_139">
+                                <widget class="QRadioButton" name="etRadioButton_avancado">
+                                 <property name="toolTip">
+                                  <string>Para Personagens a partir do &lt;b&gt;6ͦ Nível&lt;/b&gt;</string>
+                                 </property>
                                  <property name="text">
                                   <string>Avançado</string>
                                  </property>
@@ -3618,6 +3742,9 @@ QSpinBox {
                             </item>
                             <item row="2" column="0">
                              <widget class="QLabel" name="label_49">
+                              <property name="toolTip">
+                               <string/>
+                              </property>
                               <property name="text">
                                <string>Dificuldade:</string>
                               </property>
@@ -3721,7 +3848,7 @@ QPushButton::pressed{
                             <number>0</number>
                            </property>
                            <item row="0" column="0">
-                            <widget class="QPushButton" name="pushButton_13">
+                            <widget class="QPushButton" name="etCheckBox_copiar">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -3743,13 +3870,16 @@ QPushButton::pressed{
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
                              </property>
+                             <property name="toolTip">
+                              <string>&lt;p&gt;Copia para a Área de Transferencia o Resultado Gerado!&lt;/p&gt;</string>
+                             </property>
                              <property name="text">
                               <string>Copiar</string>
                              </property>
                             </widget>
                            </item>
                            <item row="0" column="1">
-                            <widget class="QPushButton" name="pushButton_17">
+                            <widget class="QPushButton" name="etCheckBox_gerar">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -3764,6 +3894,9 @@ QPushButton::pressed{
                              </property>
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="toolTip">
+                              <string>&lt;p&gt;Gera o Resultado!&lt;/p&gt;</string>
                              </property>
                              <property name="text">
                               <string>Gerar</string>
@@ -3771,7 +3904,7 @@ QPushButton::pressed{
                             </widget>
                            </item>
                            <item row="0" column="2">
-                            <widget class="QPushButton" name="pushButton_18">
+                            <widget class="QPushButton" name="etCheckBox_limpar">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -3786,6 +3919,9 @@ QPushButton::pressed{
                              </property>
                              <property name="cursor">
                               <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="toolTip">
+                              <string>&lt;p&gt;Limpa o Resultado Gerado!&lt;/p&gt;</string>
                              </property>
                              <property name="text">
                               <string>Limpar</string>
@@ -3825,7 +3961,7 @@ QPushButton::pressed{
       </property>
       <property name="minimumSize">
        <size>
-        <width>200</width>
+        <width>0</width>
         <height>0</height>
        </size>
       </property>
@@ -3845,9 +3981,7 @@ QPushButton::pressed{
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">
-QFrame{
-	image: url(:/img/img/logo.png);
+       <string notr="true">QFrame{
 	background-color: rgb(34, 34, 34);
 	border-right: 2px outset rgb(185, 38, 64);
 	border-left: 2px outset rgb(185, 38, 64);
@@ -3857,6 +3991,10 @@ QLabel{
 	border: None;
 	border-bottom: 3px solid	;
 	border-color: rgb(171, 33, 43);
+}
+
+QLabel#label{
+	image: url(:/img/img/logo.png);
 }
 
 QToolBox{
@@ -3983,8 +4121,8 @@ QPushButton::pressed{
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>172</width>
-            <height>422</height>
+            <width>140</width>
+            <height>409</height>
            </rect>
           </property>
           <attribute name="label">
@@ -4001,7 +4139,7 @@ QPushButton::pressed{
             <number>6</number>
            </property>
            <item row="1" column="0">
-            <widget class="QPushButton" name="pushButton_5">
+            <widget class="QPushButton" name="btnEncontroCombate">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -4023,7 +4161,7 @@ QPushButton::pressed{
             </widget>
            </item>
            <item row="0" column="0">
-            <widget class="QPushButton" name="pushButton_6">
+            <widget class="QPushButton" name="btnVIajandoErmos">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -4073,8 +4211,8 @@ QPushButton::pressed{
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>172</width>
-            <height>426</height>
+            <width>158</width>
+            <height>409</height>
            </rect>
           </property>
           <attribute name="label">
@@ -4082,7 +4220,7 @@ QPushButton::pressed{
           </attribute>
           <layout class="QGridLayout" name="gridLayout_19">
            <item row="0" column="0">
-            <widget class="QLabel" name="label_4">
+            <widget class="QLabel" name="label_sobre">
              <property name="font">
               <font>
                <family>Consolas</family>

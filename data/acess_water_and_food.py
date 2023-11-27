@@ -12,6 +12,7 @@ def get_forage_result(local, season, climate = 'temperado', ranger_points = 0):
     connection = sqlite3.connect(DB_FILE)
     cursor = connection.cursor()
     
+    food = 1
     bonus = 0 + ranger_points
     dice_test = dice.roll(1, 6)
  
@@ -33,9 +34,13 @@ def get_forage_result(local, season, climate = 'temperado', ranger_points = 0):
     
     cursor.close()
     connection.close()
-        
+    
+    food = food + ranger_points
+    if food <= 0:
+        food = 1
+    
     if dice_test <= margin_value + bonus:
-        return f'Foi encontrado alimentos, um total de {1 + (ranger_points-1)} Ração(es) de Viagem.'
+        return f'Foi encontrado alimentos, um total de {food} Ração(es) de Viagem.'
     else:
         return f'Não foi encontrado alimentos.'
 

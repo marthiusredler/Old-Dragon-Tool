@@ -36,4 +36,4 @@ def get_action_result(local: str, action: str):
     return (
         f'{action.capitalize()} tem o custo: {actions_and_costs[action]}\n'\
         f'Custo de Pontos para {local.capitalize()} é de {entry_cost[local]} Ponto(s).\n'\
-        f'{other}')
+        f'\n{other}')

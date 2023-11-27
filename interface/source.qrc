@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="img">
+    <file>img/logo_main_menu.png</file>
     <file>img/logo.png</file>
     <file>img/checkbutton_checked.png</file>
     <file>img/checkbutton_checked_hover.png</file>
