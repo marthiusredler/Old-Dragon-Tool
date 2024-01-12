@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'interface/interface.ui'
+# Form implementation generated from reading ui file 'interface.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.10
 #
@@ -15,7 +15,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
-        MainWindow.setMinimumSize(QtCore.QSize(900, 600))
+        MainWindow.setMinimumSize(QtCore.QSize(800, 600))
         MainWindow.setStyleSheet("*{\n"
 "    border: none;\n"
 "    background-color: rgb(34, 34, 34);\n"
@@ -156,6 +156,169 @@ class Ui_MainWindow(object):
         self.texto_inferior.setObjectName("texto_inferior")
         self.gridLayout_3.addWidget(self.texto_inferior, 0, 0, 1, 1)
         self.gridLayout.addWidget(self.barra_inferior, 3, 1, 1, 1)
+        self.barra_lateral = QtWidgets.QFrame(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.barra_lateral.sizePolicy().hasHeightForWidth())
+        self.barra_lateral.setSizePolicy(sizePolicy)
+        self.barra_lateral.setMinimumSize(QtCore.QSize(0, 0))
+        self.barra_lateral.setMaximumSize(QtCore.QSize(0, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.barra_lateral.setFont(font)
+        self.barra_lateral.setStyleSheet("QFrame{\n"
+"    background-color: rgb(34, 34, 34);\n"
+"    border-right: 2px outset rgb(185, 38, 64);\n"
+"    border-left: 2px outset rgb(185, 38, 64);\n"
+"}\n"
+"\n"
+"QLabel{\n"
+"    border: None;\n"
+"    border-bottom: 3px solid    ;\n"
+"    border-color: rgb(171, 33, 43);\n"
+"}\n"
+"\n"
+"QLabel#label{\n"
+"    image: url(:/img/img/logo.png);\n"
+"}\n"
+"\n"
+"QToolBox{\n"
+"    font: 10pt \"Consolas\";\n"
+"    background-color: rgb(52, 52, 51);\n"
+"    text: center;\n"
+"    border: None;\n"
+"    padding: 10px;\n"
+"}\n"
+"\n"
+"QToolBox::tab{\n"
+"    color: rgb(242, 242, 241);\n"
+"    border: None;\n"
+"    border-radius: 3px;\n"
+"    background-color: rgb(81, 81, 80);\n"
+"    font-align: center;\n"
+"}\n"
+"\n"
+"QToolBox::tab:selected {\n"
+"    font: bold 11pt \"Consolas\";\n"
+"}\n"
+"")
+        self.barra_lateral.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.barra_lateral.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.barra_lateral.setObjectName("barra_lateral")
+        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.barra_lateral)
+        self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_6.setSpacing(0)
+        self.verticalLayout_6.setObjectName("verticalLayout_6")
+        self.label = QtWidgets.QLabel(self.barra_lateral)
+        self.label.setMinimumSize(QtCore.QSize(0, 50))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label.setFont(font)
+        self.label.setText("")
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setIndent(10)
+        self.label.setObjectName("label")
+        self.verticalLayout_6.addWidget(self.label)
+        self.toolBox = QtWidgets.QToolBox(self.barra_lateral)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.toolBox.sizePolicy().hasHeightForWidth())
+        self.toolBox.setSizePolicy(sizePolicy)
+        self.toolBox.setMinimumSize(QtCore.QSize(0, 0))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.toolBox.setFont(font)
+        self.toolBox.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.toolBox.setStyleSheet("QPushButton::hover{\n"
+"    background-color: rgb(185, 38, 64);\n"
+"}\n"
+"QPushButton{\n"
+"    color: rgb(242, 242, 241);\n"
+"    background-color: rgb(68, 68, 67);    \n"
+"}\n"
+"QPushButton::pressed{\n"
+"    background-color: rgb(230, 35, 43);\n"
+"    font: bold 10pt \"Consolas\";\n"
+"}")
+        self.toolBox.setObjectName("toolBox")
+        self.pag_ermos = QtWidgets.QWidget()
+        self.pag_ermos.setGeometry(QtCore.QRect(0, 0, 140, 409))
+        self.pag_ermos.setObjectName("pag_ermos")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.pag_ermos)
+        self.gridLayout_2.setContentsMargins(0, -1, 0, -1)
+        self.gridLayout_2.setVerticalSpacing(6)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.btnEncontroCombate = QtWidgets.QPushButton(self.pag_ermos)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btnEncontroCombate.sizePolicy().hasHeightForWidth())
+        self.btnEncontroCombate.setSizePolicy(sizePolicy)
+        self.btnEncontroCombate.setMinimumSize(QtCore.QSize(0, 30))
+        self.btnEncontroCombate.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnEncontroCombate.setObjectName("btnEncontroCombate")
+        self.gridLayout_2.addWidget(self.btnEncontroCombate, 1, 0, 1, 1)
+        spacerItem = QtWidgets.QSpacerItem(20, 150, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_2.addItem(spacerItem, 3, 0, 1, 1)
+        self.btnVIajandoErmos = QtWidgets.QPushButton(self.pag_ermos)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btnVIajandoErmos.sizePolicy().hasHeightForWidth())
+        self.btnVIajandoErmos.setSizePolicy(sizePolicy)
+        self.btnVIajandoErmos.setMinimumSize(QtCore.QSize(30, 30))
+        self.btnVIajandoErmos.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.btnVIajandoErmos.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnVIajandoErmos.setFlat(False)
+        self.btnVIajandoErmos.setObjectName("btnVIajandoErmos")
+        self.gridLayout_2.addWidget(self.btnVIajandoErmos, 0, 0, 1, 1)
+        self.btnHexcrawl = QtWidgets.QPushButton(self.pag_ermos)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btnHexcrawl.sizePolicy().hasHeightForWidth())
+        self.btnHexcrawl.setSizePolicy(sizePolicy)
+        self.btnHexcrawl.setMinimumSize(QtCore.QSize(0, 30))
+        self.btnHexcrawl.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnHexcrawl.setObjectName("btnHexcrawl")
+        self.gridLayout_2.addWidget(self.btnHexcrawl, 2, 0, 1, 1)
+        self.toolBox.addItem(self.pag_ermos, "")
+        self.page = QtWidgets.QWidget()
+        self.page.setGeometry(QtCore.QRect(0, 0, 158, 426))
+        self.page.setObjectName("page")
+        self.gridLayout_19 = QtWidgets.QGridLayout(self.page)
+        self.gridLayout_19.setObjectName("gridLayout_19")
+        self.label_sobre = QtWidgets.QLabel(self.page)
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_sobre.setFont(font)
+        self.label_sobre.setScaledContents(False)
+        self.label_sobre.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_sobre.setWordWrap(True)
+        self.label_sobre.setIndent(0)
+        self.label_sobre.setObjectName("label_sobre")
+        self.gridLayout_19.addWidget(self.label_sobre, 0, 0, 1, 1)
+        self.toolBox.addItem(self.page, "")
+        self.verticalLayout_6.addWidget(self.toolBox)
+        self.gridLayout.addWidget(self.barra_lateral, 0, 0, 4, 1)
         self.janela_central = QtWidgets.QFrame(self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -407,8 +570,8 @@ class Ui_MainWindow(object):
         self.label_5 = QtWidgets.QLabel(self.frame_4)
         self.label_5.setObjectName("label_5")
         self.gridLayout_16.addWidget(self.label_5, 2, 0, 1, 1)
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_16.addItem(spacerItem, 4, 0, 1, 1)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_16.addItem(spacerItem1, 4, 0, 1, 1)
         self.gridLayout_6.addWidget(self.frame_4, 0, 0, 1, 1)
         self.frame_3 = QtWidgets.QFrame(self.frame_2)
         self.frame_3.setStyleSheet("QLabel{\n"
@@ -836,8 +999,8 @@ class Ui_MainWindow(object):
         self.naPushButton_limpar.setObjectName("naPushButton_limpar")
         self.gridLayout_33.addWidget(self.naPushButton_limpar, 0, 2, 1, 1)
         self.gridLayout_44.addWidget(self.frame_16, 8, 0, 1, 2)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_44.addItem(spacerItem1, 7, 0, 1, 1)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_44.addItem(spacerItem2, 7, 0, 1, 1)
         self.gridLayout_30.addWidget(self.frame_14, 0, 0, 1, 1)
         self.gridLayout_36.addWidget(self.frame_13, 0, 0, 1, 1)
         self.tabWidget.addTab(self.tab_2, "")
@@ -1157,8 +1320,8 @@ class Ui_MainWindow(object):
         self.aaCheckBox_pessoas.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.aaCheckBox_pessoas.setObjectName("aaCheckBox_pessoas")
         self.gridLayout_58.addWidget(self.aaCheckBox_pessoas, 1, 0, 1, 3)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_58.addItem(spacerItem2, 0, 1, 1, 1)
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_58.addItem(spacerItem3, 0, 1, 1, 1)
         self.gridLayout_59.addWidget(self.frame_30, 8, 0, 1, 1)
         self.frame_28 = QtWidgets.QFrame(self.scrollAreaWidgetContents_2)
         self.frame_28.setLayoutDirection(QtCore.Qt.LeftToRight)
@@ -1220,8 +1383,8 @@ class Ui_MainWindow(object):
         self.label_21 = QtWidgets.QLabel(self.scrollAreaWidgetContents_2)
         self.label_21.setObjectName("label_21")
         self.gridLayout_59.addWidget(self.label_21, 6, 0, 1, 1)
-        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_59.addItem(spacerItem3, 9, 0, 1, 1)
+        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_59.addItem(spacerItem4, 9, 0, 1, 1)
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
         self.gridLayout_42.addWidget(self.scrollArea_2, 0, 0, 1, 1)
         self.gridLayout_39.addWidget(self.frame_23, 0, 0, 1, 1)
@@ -1619,10 +1782,10 @@ class Ui_MainWindow(object):
         self.eeRadioButton_extremo.setObjectName("eeRadioButton_extremo")
         self.gridLayout_18.addWidget(self.eeRadioButton_extremo, 2, 0, 1, 1)
         self.gridLayout_20.addWidget(self.frame_11, 5, 0, 1, 2)
-        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_20.addItem(spacerItem4, 6, 0, 1, 1)
         spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_20.addItem(spacerItem5, 7, 0, 1, 1)
+        self.gridLayout_20.addItem(spacerItem5, 6, 0, 1, 1)
+        spacerItem6 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_20.addItem(spacerItem6, 7, 0, 1, 1)
         self.gridLayout_46.addWidget(self.frame_33, 0, 0, 1, 1)
         self.gridLayout_13.addWidget(self.frame_31, 0, 0, 1, 1)
         self.etRadioButton_planicie.addTab(self.tab_6, "")
@@ -1789,7 +1952,7 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollArea_3.setObjectName("scrollArea_3")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 231, 349))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 231, 335))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.gridLayout_95 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_3)
         self.gridLayout_95.setContentsMargins(9, -1, -1, -1)
@@ -1951,8 +2114,8 @@ class Ui_MainWindow(object):
         self.label_50 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
         self.label_50.setObjectName("label_50")
         self.gridLayout_95.addWidget(self.label_50, 2, 1, 1, 1)
-        spacerItem6 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_95.addItem(spacerItem6, 4, 0, 1, 2)
+        spacerItem7 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_95.addItem(spacerItem7, 4, 0, 1, 2)
         self.scrollArea_3.setWidget(self.scrollAreaWidgetContents_3)
         self.gridLayout_53.addWidget(self.scrollArea_3, 0, 0, 1, 1)
         self.gridLayout_50.addWidget(self.frame_39, 0, 0, 1, 1)
@@ -2029,176 +2192,355 @@ class Ui_MainWindow(object):
         self.etRadioButton_planicie.addTab(self.tab_7, "")
         self.gridLayout_21.addWidget(self.etRadioButton_planicie, 0, 0, 1, 1)
         self.stackedWidget.addWidget(self.page_2)
-        self.gridLayout_4.addWidget(self.stackedWidget, 0, 0, 1, 1)
-        self.gridLayout.addWidget(self.janela_central, 1, 1, 1, 1)
-        self.barra_lateral = QtWidgets.QFrame(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.barra_lateral.sizePolicy().hasHeightForWidth())
-        self.barra_lateral.setSizePolicy(sizePolicy)
-        self.barra_lateral.setMinimumSize(QtCore.QSize(0, 0))
-        self.barra_lateral.setMaximumSize(QtCore.QSize(0, 16777215))
+        self.page_3 = QtWidgets.QWidget()
+        self.page_3.setObjectName("page_3")
+        self.gridLayout_87 = QtWidgets.QGridLayout(self.page_3)
+        self.gridLayout_87.setObjectName("gridLayout_87")
+        self.tabWidget_2 = QtWidgets.QTabWidget(self.page_3)
         font = QtGui.QFont()
         font.setFamily("Consolas")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
-        self.barra_lateral.setFont(font)
-        self.barra_lateral.setStyleSheet("QFrame{\n"
-"    background-color: rgb(34, 34, 34);\n"
-"    border-right: 2px outset rgb(185, 38, 64);\n"
-"    border-left: 2px outset rgb(185, 38, 64);\n"
+        self.tabWidget_2.setFont(font)
+        self.tabWidget_2.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.tabWidget_2.setStyleSheet("QTabWidget::pane { /* The tab widget frame */\n"
+"    border-top: 2px solid  rgb(185, 38, 64);\n"
+"    \n"
 "}\n"
 "\n"
-"QLabel{\n"
-"    border: None;\n"
-"    border-bottom: 3px solid    ;\n"
-"    border-color: rgb(171, 33, 43);\n"
-"}\n"
+"QTabBar::tab {\n"
 "\n"
-"QLabel#label{\n"
-"    image: url(:/img/img/logo.png);\n"
-"}\n"
-"\n"
-"QToolBox{\n"
-"    font: 10pt \"Consolas\";\n"
-"    background-color: rgb(52, 52, 51);\n"
-"    text: center;\n"
-"    border: None;\n"
+"    background: rgb(68, 68, 67);\n"
+"    border: 1px solid rgb(53, 53, 53);\n"
+"    border-bottom-color:  rgb(185, 38, 64);\n"
+"    border-top-left-radius: 4px;\n"
+"    border-top-right-radius: 4px;\n"
+"    min-width: 8px;\n"
 "    padding: 10px;\n"
 "}\n"
 "\n"
-"QToolBox::tab{\n"
-"    color: rgb(242, 242, 241);\n"
-"    border: None;\n"
-"    border-radius: 3px;\n"
-"    background-color: rgb(81, 81, 80);\n"
-"    font-align: center;\n"
+"QTabBar::tab:selected, QTabBar::tab:hover {\n"
+"    background: rgb(185, 38, 64);\n"
 "}\n"
 "\n"
-"QToolBox::tab:selected {\n"
-"    font: bold 11pt \"Consolas\";\n"
+"QTabBar::tab:pressed{\n"
+"    background-color: rgb(230, 35, 43);\n"
+"    font: bold 10pt \"Consolas\";\n"
+"\n"
 "}\n"
-"")
-        self.barra_lateral.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.barra_lateral.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.barra_lateral.setObjectName("barra_lateral")
-        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.barra_lateral)
-        self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_6.setSpacing(0)
-        self.verticalLayout_6.setObjectName("verticalLayout_6")
-        self.label = QtWidgets.QLabel(self.barra_lateral)
-        self.label.setMinimumSize(QtCore.QSize(0, 50))
-        font = QtGui.QFont()
-        font.setFamily("Consolas")
-        font.setPointSize(10)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.label.setFont(font)
-        self.label.setText("")
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setIndent(10)
-        self.label.setObjectName("label")
-        self.verticalLayout_6.addWidget(self.label)
-        self.toolBox = QtWidgets.QToolBox(self.barra_lateral)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Preferred)
+"QFrame{\n"
+"    border-radius: 5px;\n"
+"}")
+        self.tabWidget_2.setTabPosition(QtWidgets.QTabWidget.North)
+        self.tabWidget_2.setTabShape(QtWidgets.QTabWidget.Rounded)
+        self.tabWidget_2.setElideMode(QtCore.Qt.ElideNone)
+        self.tabWidget_2.setUsesScrollButtons(True)
+        self.tabWidget_2.setDocumentMode(False)
+        self.tabWidget_2.setTabsClosable(False)
+        self.tabWidget_2.setTabBarAutoHide(False)
+        self.tabWidget_2.setObjectName("tabWidget_2")
+        self.tab_4 = QtWidgets.QWidget()
+        self.tab_4.setStyleSheet("border-radius: 5px;")
+        self.tab_4.setObjectName("tab_4")
+        self.gridLayout_24 = QtWidgets.QGridLayout(self.tab_4)
+        self.gridLayout_24.setContentsMargins(0, 5, 0, 0)
+        self.gridLayout_24.setObjectName("gridLayout_24")
+        self.frame_12 = QtWidgets.QFrame(self.tab_4)
+        self.frame_12.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.frame_12.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_12.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_12.setObjectName("frame_12")
+        self.gridLayout_25 = QtWidgets.QGridLayout(self.frame_12)
+        self.gridLayout_25.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_25.setSpacing(0)
+        self.gridLayout_25.setObjectName("gridLayout_25")
+        self.frame_41 = QtWidgets.QFrame(self.frame_12)
+        self.frame_41.setStyleSheet("color: rgb(0, 0, 0);")
+        self.frame_41.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_41.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_41.setObjectName("frame_41")
+        self.gridLayout_26 = QtWidgets.QGridLayout(self.frame_41)
+        self.gridLayout_26.setObjectName("gridLayout_26")
+        self.frame_42 = QtWidgets.QFrame(self.frame_41)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.toolBox.sizePolicy().hasHeightForWidth())
-        self.toolBox.setSizePolicy(sizePolicy)
-        self.toolBox.setMinimumSize(QtCore.QSize(0, 0))
-        font = QtGui.QFont()
-        font.setFamily("Consolas")
-        font.setPointSize(10)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(50)
-        self.toolBox.setFont(font)
-        self.toolBox.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.toolBox.setStyleSheet("QPushButton::hover{\n"
-"    background-color: rgb(185, 38, 64);\n"
-"}\n"
-"QPushButton{\n"
+        sizePolicy.setHeightForWidth(self.frame_42.sizePolicy().hasHeightForWidth())
+        self.frame_42.setSizePolicy(sizePolicy)
+        self.frame_42.setMinimumSize(QtCore.QSize(250, 0))
+        self.frame_42.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.frame_42.setStyleSheet("QLabel{\n"
+"    font: 11pt \"Consolas\";\n"
+"    border-bottom: 2px solid rgb(185, 38, 64);\n"
+"    border-radius: none;\n"
+"}")
+        self.frame_42.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_42.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_42.setObjectName("frame_42")
+        self.gridLayout_27 = QtWidgets.QGridLayout(self.frame_42)
+        self.gridLayout_27.setObjectName("gridLayout_27")
+        self.label_13 = QtWidgets.QLabel(self.frame_42)
+        self.label_13.setObjectName("label_13")
+        self.gridLayout_27.addWidget(self.label_13, 2, 0, 1, 1)
+        spacerItem8 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_27.addItem(spacerItem8, 7, 0, 1, 1)
+        self.frame_43 = QtWidgets.QFrame(self.frame_42)
+        self.frame_43.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_43.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_43.setObjectName("frame_43")
+        self.gridLayout_28 = QtWidgets.QGridLayout(self.frame_43)
+        self.gridLayout_28.setVerticalSpacing(3)
+        self.gridLayout_28.setObjectName("gridLayout_28")
+        self.hcRadioButton_planicie = QtWidgets.QRadioButton(self.frame_43)
+        self.hcRadioButton_planicie.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcRadioButton_planicie.setChecked(True)
+        self.hcRadioButton_planicie.setObjectName("hcRadioButton_planicie")
+        self.gridLayout_28.addWidget(self.hcRadioButton_planicie, 0, 0, 1, 1)
+        self.hcRadioButton_geleira = QtWidgets.QRadioButton(self.frame_43)
+        self.hcRadioButton_geleira.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcRadioButton_geleira.setObjectName("hcRadioButton_geleira")
+        self.gridLayout_28.addWidget(self.hcRadioButton_geleira, 0, 1, 1, 1)
+        self.hcRadioButton_colina = QtWidgets.QRadioButton(self.frame_43)
+        self.hcRadioButton_colina.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcRadioButton_colina.setObjectName("hcRadioButton_colina")
+        self.gridLayout_28.addWidget(self.hcRadioButton_colina, 1, 0, 1, 1)
+        self.hcRadioButton_pantano = QtWidgets.QRadioButton(self.frame_43)
+        self.hcRadioButton_pantano.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcRadioButton_pantano.setObjectName("hcRadioButton_pantano")
+        self.gridLayout_28.addWidget(self.hcRadioButton_pantano, 1, 1, 1, 1)
+        self.hcRadioButton_floresta = QtWidgets.QRadioButton(self.frame_43)
+        self.hcRadioButton_floresta.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcRadioButton_floresta.setObjectName("hcRadioButton_floresta")
+        self.gridLayout_28.addWidget(self.hcRadioButton_floresta, 2, 0, 1, 1)
+        self.hcRadioButton_montanha = QtWidgets.QRadioButton(self.frame_43)
+        self.hcRadioButton_montanha.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcRadioButton_montanha.setObjectName("hcRadioButton_montanha")
+        self.gridLayout_28.addWidget(self.hcRadioButton_montanha, 2, 1, 1, 1)
+        self.hcRadioButton_deserto = QtWidgets.QRadioButton(self.frame_43)
+        self.hcRadioButton_deserto.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcRadioButton_deserto.setObjectName("hcRadioButton_deserto")
+        self.gridLayout_28.addWidget(self.hcRadioButton_deserto, 3, 0, 1, 1)
+        self.hcRadioButton_oceano = QtWidgets.QRadioButton(self.frame_43)
+        self.hcRadioButton_oceano.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcRadioButton_oceano.setObjectName("hcRadioButton_oceano")
+        self.gridLayout_28.addWidget(self.hcRadioButton_oceano, 3, 1, 1, 1)
+        self.gridLayout_27.addWidget(self.frame_43, 3, 0, 1, 1)
+        self.frame_44 = QtWidgets.QFrame(self.frame_42)
+        self.frame_44.setMinimumSize(QtCore.QSize(0, 40))
+        self.frame_44.setStyleSheet("QPushButton{\n"
 "    color: rgb(242, 242, 241);\n"
-"    background-color: rgb(68, 68, 67);    \n"
+"    background-color: rgb(68, 68, 67);\n"
+"    font: 10pt \"Consolas\";\n"
+"    border-radius: 5px\n"
 "}\n"
+"\n"
+"QPushButton::hover{\n"
+"    background-color: rgb(185, 38, 64);\n"
+"    font: bold 10pt \"Consolas\";\n"
+"}\n"
+"\n"
 "QPushButton::pressed{\n"
 "    background-color: rgb(230, 35, 43);\n"
 "    font: bold 10pt \"Consolas\";\n"
 "}")
-        self.toolBox.setObjectName("toolBox")
-        self.pag_ermos = QtWidgets.QWidget()
-        self.pag_ermos.setGeometry(QtCore.QRect(0, 0, 140, 409))
-        self.pag_ermos.setObjectName("pag_ermos")
-        self.gridLayout_2 = QtWidgets.QGridLayout(self.pag_ermos)
-        self.gridLayout_2.setContentsMargins(0, -1, 0, -1)
-        self.gridLayout_2.setVerticalSpacing(6)
-        self.gridLayout_2.setObjectName("gridLayout_2")
-        self.btnEncontroCombate = QtWidgets.QPushButton(self.pag_ermos)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.frame_44.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_44.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_44.setObjectName("frame_44")
+        self.gridLayout_29 = QtWidgets.QGridLayout(self.frame_44)
+        self.gridLayout_29.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_29.setObjectName("gridLayout_29")
+        self.hcPushButton_copiar = QtWidgets.QPushButton(self.frame_44)
+        self.hcPushButton_copiar.setMinimumSize(QtCore.QSize(0, 40))
+        self.hcPushButton_copiar.setSizeIncrement(QtCore.QSize(0, 0))
+        self.hcPushButton_copiar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcPushButton_copiar.setObjectName("hcPushButton_copiar")
+        self.gridLayout_29.addWidget(self.hcPushButton_copiar, 0, 0, 1, 1)
+        self.hcPushButton_gerar = QtWidgets.QPushButton(self.frame_44)
+        self.hcPushButton_gerar.setMinimumSize(QtCore.QSize(0, 40))
+        self.hcPushButton_gerar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcPushButton_gerar.setObjectName("hcPushButton_gerar")
+        self.gridLayout_29.addWidget(self.hcPushButton_gerar, 0, 1, 1, 1)
+        self.hcPushButton_limpar = QtWidgets.QPushButton(self.frame_44)
+        self.hcPushButton_limpar.setMinimumSize(QtCore.QSize(0, 40))
+        self.hcPushButton_limpar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcPushButton_limpar.setObjectName("hcPushButton_limpar")
+        self.gridLayout_29.addWidget(self.hcPushButton_limpar, 0, 2, 1, 1)
+        self.gridLayout_27.addWidget(self.frame_44, 8, 0, 1, 1)
+        self.frame_47 = QtWidgets.QFrame(self.frame_42)
+        self.frame_47.setStyleSheet("")
+        self.frame_47.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_47.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_47.setObjectName("frame_47")
+        self.gridLayout_60 = QtWidgets.QGridLayout(self.frame_47)
+        self.gridLayout_60.setVerticalSpacing(3)
+        self.gridLayout_60.setObjectName("gridLayout_60")
+        self.hcRadioButton_temperado = QtWidgets.QRadioButton(self.frame_47)
+        self.hcRadioButton_temperado.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcRadioButton_temperado.setObjectName("hcRadioButton_temperado")
+        self.gridLayout_60.addWidget(self.hcRadioButton_temperado, 2, 0, 1, 1)
+        self.hcRadioButton_tropical = QtWidgets.QRadioButton(self.frame_47)
+        self.hcRadioButton_tropical.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcRadioButton_tropical.setObjectName("hcRadioButton_tropical")
+        self.gridLayout_60.addWidget(self.hcRadioButton_tropical, 3, 0, 1, 1)
+        self.hcRadioButton_polar = QtWidgets.QRadioButton(self.frame_47)
+        self.hcRadioButton_polar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.hcRadioButton_polar.setChecked(True)
+        self.hcRadioButton_polar.setObjectName("hcRadioButton_polar")
+        self.gridLayout_60.addWidget(self.hcRadioButton_polar, 1, 0, 1, 1)
+        self.gridLayout_27.addWidget(self.frame_47, 5, 0, 1, 1)
+        self.label_9 = QtWidgets.QLabel(self.frame_42)
+        self.label_9.setObjectName("label_9")
+        self.gridLayout_27.addWidget(self.label_9, 4, 0, 1, 1)
+        self.gridLayout_26.addWidget(self.frame_42, 0, 0, 1, 1)
+        self.frame_48 = QtWidgets.QFrame(self.frame_41)
+        self.frame_48.setStyleSheet("QLabel{\n"
+"    font: 12pt \"Consolas\";\n"
+"}\n"
+"\n"
+"#frame_48{\n"
+"    border:  solid;\n"
+"    border-width: 0px 0px 0px 2px;\n"
+"    border-color: rgb(185, 38, 64);\n"
+"    border-radius: 0px;\n"
+"}\n"
+"\n"
+"QScrollBar:vertical {\n"
+"     width: 12px;\n"
+"     margin: 22px 0x;\n"
+" }\n"
+"\n"
+"QScrollBar::add-line:vertical {\n"
+"    background-color: rgb(68, 68, 67);\n"
+"    height: 20px;\n"
+"    subcontrol-position: bottom;\n"
+"    subcontrol-origin: margin;\n"
+"    border-radius: 5px;\n"
+" }\n"
+"\n"
+"QScrollBar::add-line:vertical:hover {\n"
+"    background-color: rgb(185, 38, 64);\n"
+"}\n"
+"\n"
+"QScrollBar::add-line:vertical:pressed {    \n"
+"    background-color: rgb(230, 35, 43);\n"
+"}\n"
+"\n"
+"QScrollBar::sub-line:vertical {\n"
+"    background-color: rgb(68, 68, 67);\n"
+"    height: 20px;\n"
+"    subcontrol-position: top;\n"
+"    subcontrol-origin: margin;\n"
+"    border-radius: 5px;\n"
+" }\n"
+"\n"
+"QScrollBar::sub-line:vertical:hover {\n"
+"    background-color: rgb(185, 38, 64);\n"
+"}\n"
+"\n"
+"QScrollBar::sub-line:vertical:pressed {    \n"
+"    background-color: rgb(230, 35, 43);\n"
+"}\n"
+"\n"
+"QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {\n"
+"    width: 3px;\n"
+"    height: 3px;\n"
+"    background: white;\n"
+"}\n"
+"\n"
+"QScrollBar::handle {\n"
+"    border-radius: 5px;\n"
+"    background-color: rgb(68, 68, 67);\n"
+"    min-width: 50px;\n"
+"}\n"
+"\n"
+"QScrollBar::handle:hover {\n"
+"    background-color: rgb(185, 38, 64);\n"
+"}\n"
+"\n"
+"QScrollBar::handle:pressed {\n"
+"    background-color: rgb(230, 35, 43);\n"
+"}\n"
+"\n"
+"")
+        self.frame_48.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_48.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_48.setObjectName("frame_48")
+        self.gridLayout_61 = QtWidgets.QGridLayout(self.frame_48)
+        self.gridLayout_61.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_61.setObjectName("gridLayout_61")
+        self.scrollArea_4 = QtWidgets.QScrollArea(self.frame_48)
+        self.scrollArea_4.setStyleSheet("QLabel{\n"
+"    font: 12pt \"Consolas\";\n"
+"}\n"
+"\n"
+"#frame_48{\n"
+"    border:  solid;\n"
+"    border-width: 0px 0px 0px 2px;\n"
+"    border-color: rgb(185, 38, 64);\n"
+"    border-radius: 0px;\n"
+"}")
+        self.scrollArea_4.setMidLineWidth(0)
+        self.scrollArea_4.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.scrollArea_4.setWidgetResizable(True)
+        self.scrollArea_4.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.scrollArea_4.setObjectName("scrollArea_4")
+        self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 493, 407))
+        self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
+        self.gridLayout_62 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_4)
+        self.gridLayout_62.setObjectName("gridLayout_62")
+        self.hcLabel_result = QtWidgets.QLabel(self.scrollAreaWidgetContents_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.btnEncontroCombate.sizePolicy().hasHeightForWidth())
-        self.btnEncontroCombate.setSizePolicy(sizePolicy)
-        self.btnEncontroCombate.setMinimumSize(QtCore.QSize(0, 30))
-        self.btnEncontroCombate.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btnEncontroCombate.setObjectName("btnEncontroCombate")
-        self.gridLayout_2.addWidget(self.btnEncontroCombate, 1, 0, 1, 1)
-        self.btnVIajandoErmos = QtWidgets.QPushButton(self.pag_ermos)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.btnVIajandoErmos.sizePolicy().hasHeightForWidth())
-        self.btnVIajandoErmos.setSizePolicy(sizePolicy)
-        self.btnVIajandoErmos.setMinimumSize(QtCore.QSize(30, 30))
-        self.btnVIajandoErmos.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        self.btnVIajandoErmos.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.btnVIajandoErmos.setFlat(False)
-        self.btnVIajandoErmos.setObjectName("btnVIajandoErmos")
-        self.gridLayout_2.addWidget(self.btnVIajandoErmos, 0, 0, 1, 1)
-        spacerItem7 = QtWidgets.QSpacerItem(20, 150, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_2.addItem(spacerItem7, 2, 0, 1, 1)
-        self.toolBox.addItem(self.pag_ermos, "")
-        self.page = QtWidgets.QWidget()
-        self.page.setGeometry(QtCore.QRect(0, 0, 158, 409))
-        self.page.setObjectName("page")
-        self.gridLayout_19 = QtWidgets.QGridLayout(self.page)
-        self.gridLayout_19.setObjectName("gridLayout_19")
-        self.label_sobre = QtWidgets.QLabel(self.page)
+        sizePolicy.setHeightForWidth(self.hcLabel_result.sizePolicy().hasHeightForWidth())
+        self.hcLabel_result.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Consolas")
-        font.setPointSize(10)
+        font.setPointSize(12)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(50)
-        self.label_sobre.setFont(font)
-        self.label_sobre.setScaledContents(False)
-        self.label_sobre.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_sobre.setWordWrap(True)
-        self.label_sobre.setIndent(0)
-        self.label_sobre.setObjectName("label_sobre")
-        self.gridLayout_19.addWidget(self.label_sobre, 0, 0, 1, 1)
-        self.toolBox.addItem(self.page, "")
-        self.verticalLayout_6.addWidget(self.toolBox)
-        self.gridLayout.addWidget(self.barra_lateral, 0, 0, 4, 1)
+        self.hcLabel_result.setFont(font)
+        self.hcLabel_result.setAlignment(QtCore.Qt.AlignCenter)
+        self.hcLabel_result.setWordWrap(True)
+        self.hcLabel_result.setIndent(0)
+        self.hcLabel_result.setObjectName("hcLabel_result")
+        self.gridLayout_62.addWidget(self.hcLabel_result, 0, 0, 1, 1)
+        self.scrollArea_4.setWidget(self.scrollAreaWidgetContents_4)
+        self.gridLayout_61.addWidget(self.scrollArea_4, 0, 0, 1, 1)
+        self.gridLayout_26.addWidget(self.frame_48, 0, 1, 1, 1)
+        self.gridLayout_25.addWidget(self.frame_41, 0, 0, 1, 1)
+        self.gridLayout_24.addWidget(self.frame_12, 0, 0, 1, 1)
+        self.tabWidget_2.addTab(self.tab_4, "")
+        self.gridLayout_87.addWidget(self.tabWidget_2, 0, 0, 1, 1)
+        self.stackedWidget.addWidget(self.page_3)
+        self.gridLayout_4.addWidget(self.stackedWidget, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.janela_central, 1, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
+        self.toolBox.setCurrentIndex(0)
+        self.toolBox.layout().setSpacing(15)
         self.stackedWidget.setCurrentIndex(0)
         self.tabWidget.setCurrentIndex(0)
         self.etRadioButton_planicie.setCurrentIndex(0)
-        self.toolBox.setCurrentIndex(0)
-        self.toolBox.layout().setSpacing(15)
+        self.tabWidget_2.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.btn_superior.setText(_translate("MainWindow", "Old Dragon Tool"))
-        self.texto_inferior.setText(_translate("MainWindow", "@marthiusredler | 1.0.0-alpha"))
+        self.texto_inferior.setText(_translate("MainWindow", "@marthiusredler"))
+        self.btnEncontroCombate.setText(_translate("MainWindow", "Encontros e Combates"))
+        self.btnVIajandoErmos.setText(_translate("MainWindow", "Viajando Pelos Ermos"))
+        self.btnHexcrawl.setText(_translate("MainWindow", "Hexcrawl"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.pag_ermos), _translate("MainWindow", "Ermos"))
+        self.label_sobre.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:9pt;\">Old Dragon 2ª Edição © 2023 da Buró Editora está licenciado sob CC BY-SA 4.0 e é uma criação de Antonio Sá Neto, Dan Ramos e Fabiano Neme baseado nos originais de Gary Gygax e Dave Arneson. Para ver uma cópia desta licença, visite </span><span style=\" font-size:9pt; color:#e6232b;\">http://creativecommons.org/licenses/by-sa/4.0/</span></p></body></html>"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page), _translate("MainWindow", "Sobre"))
         self.pjRadioButton_planicie.setText(_translate("MainWindow", "Planicie"))
         self.pjRadioButton_geleira.setText(_translate("MainWindow", "Geleira"))
         self.pjRadioButton_colina.setText(_translate("MainWindow", "Colina"))
@@ -2358,9 +2700,25 @@ class Ui_MainWindow(object):
         self.etCheckBox_limpar.setToolTip(_translate("MainWindow", "<p>Limpa o Resultado Gerado!</p>"))
         self.etCheckBox_limpar.setText(_translate("MainWindow", "Limpar"))
         self.etRadioButton_planicie.setTabText(self.etRadioButton_planicie.indexOf(self.tab_7), _translate("MainWindow", "Encontros por Tabela"))
-        self.btnEncontroCombate.setText(_translate("MainWindow", "Encontros e Combates"))
-        self.btnVIajandoErmos.setText(_translate("MainWindow", "Viajando Pelos Ermos"))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.pag_ermos), _translate("MainWindow", "Ermos"))
-        self.label_sobre.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:9pt;\">Old Dragon 2ª Edição © 2023 da Buró Editora está licenciado sob CC BY-SA 4.0 e é uma criação de Antonio Sá Neto, Dan Ramos e Fabiano Neme baseado nos originais de Gary Gygax e Dave Arneson. Para ver uma cópia desta licença, visite </span><span style=\" font-size:9pt; color:#e6232b;\">http://creativecommons.org/licenses/by-sa/4.0/</span></p></body></html>"))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.page), _translate("MainWindow", "Sobre"))
+        self.label_13.setText(_translate("MainWindow", "Local:"))
+        self.hcRadioButton_planicie.setText(_translate("MainWindow", "Planicie"))
+        self.hcRadioButton_geleira.setText(_translate("MainWindow", "Geleira"))
+        self.hcRadioButton_colina.setText(_translate("MainWindow", "Colina"))
+        self.hcRadioButton_pantano.setText(_translate("MainWindow", "Pantâno"))
+        self.hcRadioButton_floresta.setText(_translate("MainWindow", "Floresta"))
+        self.hcRadioButton_montanha.setText(_translate("MainWindow", "Montanha"))
+        self.hcRadioButton_deserto.setText(_translate("MainWindow", "Deserto"))
+        self.hcRadioButton_oceano.setText(_translate("MainWindow", "Oceano"))
+        self.hcPushButton_copiar.setToolTip(_translate("MainWindow", "<p>Copia para a Área de Transferencia o Resultado Gerado!</p>"))
+        self.hcPushButton_copiar.setText(_translate("MainWindow", "Copiar"))
+        self.hcPushButton_gerar.setToolTip(_translate("MainWindow", "<p>Gera o Resultado!</p>"))
+        self.hcPushButton_gerar.setText(_translate("MainWindow", "Gerar"))
+        self.hcPushButton_limpar.setToolTip(_translate("MainWindow", "<p>Limpa o Resultado Gerado!</p>"))
+        self.hcPushButton_limpar.setText(_translate("MainWindow", "Limpar"))
+        self.hcRadioButton_temperado.setText(_translate("MainWindow", "Temperado"))
+        self.hcRadioButton_tropical.setText(_translate("MainWindow", "Tropical"))
+        self.hcRadioButton_polar.setText(_translate("MainWindow", "Polar"))
+        self.label_9.setText(_translate("MainWindow", "Ação:"))
+        self.hcLabel_result.setText(_translate("MainWindow", "<html><head/><body><p>Escolha as opções e clique em gerar.</p></body></html>"))
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_4), _translate("MainWindow", "HexCrawl"))
 

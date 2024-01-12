@@ -1,7 +1,7 @@
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QMainWindow, QWidget, QApplication
 from interface.interface import Ui_MainWindow
-from modules import journey_points, encounter, navigation, camping
+from modules import journey_points, encounter, navigation, camping, hexgenerator
 from data import acess_water_and_food as acessWF
 from pyperclip import copy
 from time import sleep
@@ -21,6 +21,7 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         #Toggle Pages
         self.btnVIajandoErmos.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_1))
         self.btnEncontroCombate.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_2))
+        self.btnHexcrawl.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_3))
         
         #Page: Pontos de Jornada
         self.pjPushButton_gerar.clicked.connect(self.getJorneyResult)
@@ -47,6 +48,11 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.etCheckBox_gerar.clicked.connect(self.getTableEncounter)
         self.etCheckBox_limpar.clicked.connect(lambda: self.etLabel_result.setText(standardText))
         self.etCheckBox_copiar.clicked.connect(lambda: copy(self.etLabel_result.text()))
+
+        #Page: Hexcrawl
+        self.hcPushButton_gerar.clicked.connect(self.getNewHex)
+        self.hcPushButton_limpar.clicked.connect(lambda: self.hcLabel_result.setText(standardText))
+        self.hcPushButton_copiar.clicked.connect(lambda: copy(self.hcLabel_result.text()))
         
     def getJorneyResult(self):
         action = ""
@@ -247,11 +253,42 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         if not haveAnimal:
             self.etLabel_result.setText(encounter.get_encounter(local, difficulty, level))
         else:
-            if not local == 'qualquer' or local == 'extraplanar' or local == 'humano':
-                self.etLabel_result.setText(encounter.get_encounter(local, difficulty, level, haveAnimal)) 
-            else:
+            if local == 'qualquer' or local == 'extraplanar' or local == 'humano':
                 self.etLabel_result.setText('Ao Escolher "Animais" você deve escolher um Bioma!') 
+            else:
+                self.etLabel_result.setText(encounter.get_encounter(local, difficulty, level, haveAnimal)) 
     
+    def getNewHex(self):
+        
+        local = ''
+        climate = ''
+        
+        if self.hcRadioButton_planicie.isChecked():
+            local = 'planicie'
+        elif self.hcRadioButton_geleira.isChecked():
+            local = 'geleira'
+        elif self.hcRadioButton_colina.isChecked():
+            local = 'colina'
+        elif self.hcRadioButton_pantano.isChecked():
+            local = 'pantano'
+        elif self.hcRadioButton_floresta.isChecked():
+            local = 'floresta'
+        elif self.hcRadioButton_montanha.isChecked():
+            local = 'montanha'
+        elif self.hcRadioButton_deserto.isChecked():
+            local = 'deserto'
+        elif self.hcRadioButton_oceano.isChecked():
+            local = 'oceano'
+    
+        if self.hcRadioButton_polar.isChecked():
+            climate = 'polar'
+        elif self.hcRadioButton_temperado.isChecked():
+            climate = 'temperado'
+        elif self.hcRadioButton_tropical.isChecked():
+            climate = 'tropical'
+        
+        self.hcLabel_result.setText(hexgenerator.generateHex(local, climate))
+            
     def LeftMenu(self):
         
         width = self.barra_lateral.width()

@@ -223,6 +223,334 @@ QPushButton::pressed{
       </layout>
      </widget>
     </item>
+    <item row="0" column="0" rowspan="4">
+     <widget class="QFrame" name="barra_lateral">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>0</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame{
+	background-color: rgb(34, 34, 34);
+	border-right: 2px outset rgb(185, 38, 64);
+	border-left: 2px outset rgb(185, 38, 64);
+}
+
+QLabel{
+	border: None;
+	border-bottom: 3px solid	;
+	border-color: rgb(171, 33, 43);
+}
+
+QLabel#label{
+	image: url(:/img/img/logo.png);
+}
+
+QToolBox{
+	font: 10pt &quot;Consolas&quot;;
+	background-color: rgb(52, 52, 51);
+	text: center;
+	border: None;
+	padding: 10px;
+}
+
+QToolBox::tab{
+	color: rgb(242, 242, 241);
+	border: None;
+	border-radius: 3px;
+	background-color: rgb(81, 81, 80);
+	font-align: center;
+}
+
+QToolBox::tab:selected {
+	font: bold 11pt &quot;Consolas&quot;;
+}
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Consolas</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="margin">
+          <number>30</number>
+         </property>
+         <property name="indent">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolBox" name="toolBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Consolas</family>
+           <pointsize>10</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton::hover{
+	background-color: rgb(185, 38, 64);
+}
+QPushButton{
+	color: rgb(242, 242, 241);
+	background-color: rgb(68, 68, 67);	
+}
+QPushButton::pressed{
+	background-color: rgb(230, 35, 43);
+	font: bold 10pt &quot;Consolas&quot;;
+}</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <property name="tabSpacing">
+          <number>15</number>
+         </property>
+         <widget class="QWidget" name="pag_ermos">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>140</width>
+            <height>409</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Ermos</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>6</number>
+           </property>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="btnEncontroCombate">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="text">
+              <string>Encontros e Combates</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>150</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="btnVIajandoErmos">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="text">
+              <string>Viajando Pelos Ermos</string>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QPushButton" name="btnHexcrawl">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="text">
+              <string>Hexcrawl</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>158</width>
+            <height>409</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Sobre</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_19">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_sobre">
+             <property name="font">
+              <font>
+               <family>Consolas</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Old Dragon 2ª Edição © 2023 da Buró Editora está licenciado sob CC BY-SA 4.0 e é uma criação de Antonio Sá Neto, Dan Ramos e Fabiano Neme baseado nos originais de Gary Gygax e Dave Arneson. Para ver uma cópia desta licença, visite &lt;/span&gt;&lt;span style=&quot; font-size:9pt; color:#e6232b;&quot;&gt;http://creativecommons.org/licenses/by-sa/4.0/&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+             <property name="margin">
+              <number>0</number>
+             </property>
+             <property name="indent">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
     <item row="1" column="1">
      <widget class="QFrame" name="janela_central">
       <property name="sizePolicy">
@@ -894,7 +1222,7 @@ QScrollBar::handle:pressed {
                             <rect>
                              <x>0</x>
                              <y>0</y>
-                             <width>293</width>
+                             <width>493</width>
                              <height>407</height>
                             </rect>
                            </property>
@@ -3427,7 +3755,7 @@ QSpinBox {
                              <x>0</x>
                              <y>0</y>
                              <width>231</width>
-                             <height>349</height>
+                             <height>335</height>
                             </rect>
                            </property>
                            <layout class="QGridLayout" name="gridLayout_95">
@@ -3946,281 +4274,10 @@ QPushButton::pressed{
            </item>
           </layout>
          </widget>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="0" column="0" rowspan="4">
-     <widget class="QFrame" name="barra_lateral">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>0</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Consolas</family>
-        <pointsize>10</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QFrame{
-	background-color: rgb(34, 34, 34);
-	border-right: 2px outset rgb(185, 38, 64);
-	border-left: 2px outset rgb(185, 38, 64);
-}
-
-QLabel{
-	border: None;
-	border-bottom: 3px solid	;
-	border-color: rgb(171, 33, 43);
-}
-
-QLabel#label{
-	image: url(:/img/img/logo.png);
-}
-
-QToolBox{
-	font: 10pt &quot;Consolas&quot;;
-	background-color: rgb(52, 52, 51);
-	text: center;
-	border: None;
-	padding: 10px;
-}
-
-QToolBox::tab{
-	color: rgb(242, 242, 241);
-	border: None;
-	border-radius: 3px;
-	background-color: rgb(81, 81, 80);
-	font-align: center;
-}
-
-QToolBox::tab:selected {
-	font: bold 11pt &quot;Consolas&quot;;
-}
-</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_6">
-       <property name="spacing">
-        <number>0</number>
-       </property>
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>50</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Consolas</family>
-           <pointsize>10</pointsize>
-           <weight>50</weight>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="margin">
-          <number>30</number>
-         </property>
-         <property name="indent">
-          <number>10</number>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QToolBox" name="toolBox">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Consolas</family>
-           <pointsize>10</pointsize>
-           <weight>50</weight>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton::hover{
-	background-color: rgb(185, 38, 64);
-}
-QPushButton{
-	color: rgb(242, 242, 241);
-	background-color: rgb(68, 68, 67);	
-}
-QPushButton::pressed{
-	background-color: rgb(230, 35, 43);
-	font: bold 10pt &quot;Consolas&quot;;
-}</string>
-         </property>
-         <property name="currentIndex">
-          <number>0</number>
-         </property>
-         <property name="tabSpacing">
-          <number>15</number>
-         </property>
-         <widget class="QWidget" name="pag_ermos">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>140</width>
-            <height>409</height>
-           </rect>
-          </property>
-          <attribute name="label">
-           <string>Ermos</string>
-          </attribute>
-          <layout class="QGridLayout" name="gridLayout_2">
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="verticalSpacing">
-            <number>6</number>
-           </property>
-           <item row="1" column="0">
-            <widget class="QPushButton" name="btnEncontroCombate">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="text">
-              <string>Encontros e Combates</string>
-             </property>
-            </widget>
-           </item>
+         <widget class="QWidget" name="page_3">
+          <layout class="QGridLayout" name="gridLayout_87">
            <item row="0" column="0">
-            <widget class="QPushButton" name="btnVIajandoErmos">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>30</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="text">
-              <string>Viajando Pelos Ermos</string>
-             </property>
-             <property name="flat">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <spacer name="verticalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>150</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="page">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>158</width>
-            <height>409</height>
-           </rect>
-          </property>
-          <attribute name="label">
-           <string>Sobre</string>
-          </attribute>
-          <layout class="QGridLayout" name="gridLayout_19">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_sobre">
+            <widget class="QTabWidget" name="tabWidget_2">
              <property name="font">
               <font>
                <family>Consolas</family>
@@ -4230,24 +4287,623 @@ QPushButton::pressed{
                <bold>false</bold>
               </font>
              </property>
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Old Dragon 2ª Edição © 2023 da Buró Editora está licenciado sob CC BY-SA 4.0 e é uma criação de Antonio Sá Neto, Dan Ramos e Fabiano Neme baseado nos originais de Gary Gygax e Dave Arneson. Para ver uma cópia desta licença, visite &lt;/span&gt;&lt;span style=&quot; font-size:9pt; color:#e6232b;&quot;&gt;http://creativecommons.org/licenses/by-sa/4.0/&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <property name="cursor">
+              <cursorShape>ArrowCursor</cursorShape>
              </property>
-             <property name="scaledContents">
-              <bool>false</bool>
+             <property name="styleSheet">
+              <string notr="true">QTabWidget::pane { /* The tab widget frame */
+    border-top: 2px solid  rgb(185, 38, 64);
+	
+}
+
+QTabBar::tab {
+
+    background: rgb(68, 68, 67);
+    border: 1px solid rgb(53, 53, 53);
+    border-bottom-color:  rgb(185, 38, 64);
+	border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width: 8px;
+    padding: 10px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: rgb(185, 38, 64);
+}
+
+QTabBar::tab:pressed{
+	background-color: rgb(230, 35, 43);
+	font: bold 10pt &quot;Consolas&quot;;
+
+}
+QFrame{
+	border-radius: 5px;
+}</string>
              </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+             <property name="tabPosition">
+              <enum>QTabWidget::North</enum>
              </property>
-             <property name="wordWrap">
+             <property name="tabShape">
+              <enum>QTabWidget::Rounded</enum>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <property name="elideMode">
+              <enum>Qt::ElideNone</enum>
+             </property>
+             <property name="usesScrollButtons">
               <bool>true</bool>
              </property>
-             <property name="margin">
-              <number>0</number>
+             <property name="documentMode">
+              <bool>false</bool>
              </property>
-             <property name="indent">
-              <number>0</number>
+             <property name="tabsClosable">
+              <bool>false</bool>
              </property>
+             <property name="tabBarAutoHide">
+              <bool>false</bool>
+             </property>
+             <widget class="QWidget" name="tab_4">
+              <property name="styleSheet">
+               <string notr="true">border-radius: 5px;</string>
+              </property>
+              <attribute name="title">
+               <string>HexCrawl</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_24">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QFrame" name="frame_12">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_25">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QFrame" name="frame_41">
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(0, 0, 0);</string>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_26">
+                     <item row="0" column="0">
+                      <widget class="QFrame" name="frame_42">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+	font: 11pt &quot;Consolas&quot;;
+	border-bottom: 2px solid rgb(185, 38, 64);
+	border-radius: none;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_27">
+                        <item row="2" column="0">
+                         <widget class="QLabel" name="label_13">
+                          <property name="text">
+                           <string>Local:</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="7" column="0">
+                         <spacer name="verticalSpacer_8">
+                          <property name="orientation">
+                           <enum>Qt::Vertical</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                           <size>
+                            <width>20</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                         </spacer>
+                        </item>
+                        <item row="3" column="0">
+                         <widget class="QFrame" name="frame_43">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QGridLayout" name="gridLayout_28">
+                           <property name="verticalSpacing">
+                            <number>3</number>
+                           </property>
+                           <item row="0" column="0">
+                            <widget class="QRadioButton" name="hcRadioButton_planicie">
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="text">
+                              <string>Planicie</string>
+                             </property>
+                             <property name="checked">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="1">
+                            <widget class="QRadioButton" name="hcRadioButton_geleira">
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="text">
+                              <string>Geleira</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="0">
+                            <widget class="QRadioButton" name="hcRadioButton_colina">
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="text">
+                              <string>Colina</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="1">
+                            <widget class="QRadioButton" name="hcRadioButton_pantano">
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="text">
+                              <string>Pantâno</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="2" column="0">
+                            <widget class="QRadioButton" name="hcRadioButton_floresta">
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="text">
+                              <string>Floresta</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="2" column="1">
+                            <widget class="QRadioButton" name="hcRadioButton_montanha">
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="text">
+                              <string>Montanha</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="3" column="0">
+                            <widget class="QRadioButton" name="hcRadioButton_deserto">
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="text">
+                              <string>Deserto</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="3" column="1">
+                            <widget class="QRadioButton" name="hcRadioButton_oceano">
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="text">
+                              <string>Oceano</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item row="8" column="0">
+                         <widget class="QFrame" name="frame_44">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QPushButton{
+	color: rgb(242, 242, 241);
+	background-color: rgb(68, 68, 67);
+	font: 10pt &quot;Consolas&quot;;
+	border-radius: 5px
+}
+
+QPushButton::hover{
+	background-color: rgb(185, 38, 64);
+	font: bold 10pt &quot;Consolas&quot;;
+}
+
+QPushButton::pressed{
+	background-color: rgb(230, 35, 43);
+	font: bold 10pt &quot;Consolas&quot;;
+}</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QGridLayout" name="gridLayout_29">
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item row="0" column="0">
+                            <widget class="QPushButton" name="hcPushButton_copiar">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>40</height>
+                              </size>
+                             </property>
+                             <property name="sizeIncrement">
+                              <size>
+                               <width>0</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="toolTip">
+                              <string>&lt;p&gt;Copia para a Área de Transferencia o Resultado Gerado!&lt;/p&gt;</string>
+                             </property>
+                             <property name="text">
+                              <string>Copiar</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="1">
+                            <widget class="QPushButton" name="hcPushButton_gerar">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>40</height>
+                              </size>
+                             </property>
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="toolTip">
+                              <string>&lt;p&gt;Gera o Resultado!&lt;/p&gt;</string>
+                             </property>
+                             <property name="text">
+                              <string>Gerar</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="2">
+                            <widget class="QPushButton" name="hcPushButton_limpar">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>40</height>
+                              </size>
+                             </property>
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="toolTip">
+                              <string>&lt;p&gt;Limpa o Resultado Gerado!&lt;/p&gt;</string>
+                             </property>
+                             <property name="text">
+                              <string>Limpar</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item row="5" column="0">
+                         <widget class="QFrame" name="frame_47">
+                          <property name="styleSheet">
+                           <string notr="true"/>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QGridLayout" name="gridLayout_60">
+                           <property name="verticalSpacing">
+                            <number>3</number>
+                           </property>
+                           <item row="2" column="0">
+                            <widget class="QRadioButton" name="hcRadioButton_temperado">
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="text">
+                              <string>Temperado</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="3" column="0">
+                            <widget class="QRadioButton" name="hcRadioButton_tropical">
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="text">
+                              <string>Tropical</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="0">
+                            <widget class="QRadioButton" name="hcRadioButton_polar">
+                             <property name="cursor">
+                              <cursorShape>PointingHandCursor</cursorShape>
+                             </property>
+                             <property name="text">
+                              <string>Polar</string>
+                             </property>
+                             <property name="checked">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item row="4" column="0">
+                         <widget class="QLabel" name="label_9">
+                          <property name="text">
+                           <string>Ação:</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QFrame" name="frame_48">
+                       <property name="styleSheet">
+                        <string notr="true">QLabel{
+	font: 12pt &quot;Consolas&quot;;
+}
+
+#frame_48{
+	border:  solid;
+	border-width: 0px 0px 0px 2px;
+	border-color: rgb(185, 38, 64);
+	border-radius: 0px;
+}
+
+QScrollBar:vertical {
+     width: 12px;
+     margin: 22px 0x;
+ }
+
+QScrollBar::add-line:vertical {
+	background-color: rgb(68, 68, 67);
+    height: 20px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+	border-radius: 5px;
+ }
+
+QScrollBar::add-line:vertical:hover {
+	background-color: rgb(185, 38, 64);
+}
+
+QScrollBar::add-line:vertical:pressed {	
+	background-color: rgb(230, 35, 43);
+}
+
+QScrollBar::sub-line:vertical {
+	background-color: rgb(68, 68, 67);
+	height: 20px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+	border-radius: 5px;
+ }
+
+QScrollBar::sub-line:vertical:hover {
+	background-color: rgb(185, 38, 64);
+}
+
+QScrollBar::sub-line:vertical:pressed {	
+	background-color: rgb(230, 35, 43);
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	width: 3px;
+    height: 3px;
+    background: white;
+}
+
+QScrollBar::handle {
+	border-radius: 5px;
+	background-color: rgb(68, 68, 67);
+	min-width: 50px;
+}
+
+QScrollBar::handle:hover {
+	background-color: rgb(185, 38, 64);
+}
+
+QScrollBar::handle:pressed {
+	background-color: rgb(230, 35, 43);
+}
+
+</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QGridLayout" name="gridLayout_61">
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item row="0" column="0">
+                         <widget class="QScrollArea" name="scrollArea_4">
+                          <property name="styleSheet">
+                           <string notr="true">QLabel{
+	font: 12pt &quot;Consolas&quot;;
+}
+
+#frame_48{
+	border:  solid;
+	border-width: 0px 0px 0px 2px;
+	border-color: rgb(185, 38, 64);
+	border-radius: 0px;
+}</string>
+                          </property>
+                          <property name="midLineWidth">
+                           <number>0</number>
+                          </property>
+                          <property name="horizontalScrollBarPolicy">
+                           <enum>Qt::ScrollBarAlwaysOff</enum>
+                          </property>
+                          <property name="widgetResizable">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                          </property>
+                          <widget class="QWidget" name="scrollAreaWidgetContents_4">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>0</y>
+                             <width>493</width>
+                             <height>407</height>
+                            </rect>
+                           </property>
+                           <layout class="QGridLayout" name="gridLayout_62">
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="hcLabel_result">
+                              <property name="sizePolicy">
+                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                               </sizepolicy>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <family>Consolas</family>
+                                <pointsize>12</pointsize>
+                                <weight>50</weight>
+                                <italic>false</italic>
+                                <bold>false</bold>
+                               </font>
+                              </property>
+                              <property name="text">
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Escolha as opções e clique em gerar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                              <property name="wordWrap">
+                               <bool>true</bool>
+                              </property>
+                              <property name="margin">
+                               <number>5</number>
+                              </property>
+                              <property name="indent">
+                               <number>0</number>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>
