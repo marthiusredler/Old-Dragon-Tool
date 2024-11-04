@@ -1,0 +1,42 @@
+Fontes:
+
+#Corpo do texto; Titulos;
+Alegreya
+
+#Textos Curtos; Quadros; Caixa de Destaque e Tabelas
+Alegreya Sans
+
+#Fonte de Apoio
+Whitney Index
+
+Cores:
+
+#OD2 VERMELHO
+CMYK : C015 M100 Y100 K30
+RGB : R158 G021 B016
+Web : #9e1510
+
+#OD2 DOURADO
+CMYK : C035 M000 Y005 K000
+RGB : R176 G153 B084
+Web : #b09954
+
+#OD2 AZUL
+CMYK : C035 M000 Y005 K000
+RGB : R000 G123 B160
+Web : #007ba0
+
+OD2 VERDE
+CMYK : C035 M000 Y005 K000
+RGB : R050 G130 B041
+Web : #328229
+
+OD2 GRAFITE
+CMYK : C065 M055 Y054 K056
+RGB : R066 G066 B065
+Web : #414140
+
+OD2 CINZA
+CMYK : C020 M014 Y015 K001
+RGB : R211 G211 B212
+Web : #d3d3d4
