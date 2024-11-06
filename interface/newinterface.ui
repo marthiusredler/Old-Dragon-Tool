@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -232,6 +235,9 @@ QLabel::hover {
               <bold>true</bold>
              </font>
             </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
             </property>
@@ -262,6 +268,9 @@ QLabel::hover {
             <property name="openExternalLinks">
              <bool>true</bool>
             </property>
+            <property name="textInteractionFlags">
+             <set>Qt::LinksAccessibleByMouse</set>
+            </property>
            </widget>
           </item>
          </layout>
@@ -275,7 +284,7 @@ QLabel::hover {
 	background-color: rgb(211, 211, 212);
 	border-radius: 5px;
 	margin: 1px 0px;
-	font-weight: 450;
+	font-weight: 500;
 }
 
 QPushButton::hover {
@@ -306,13 +315,13 @@ QFrame {
          </property>
          <layout class="QGridLayout" name="gridLayout_6">
           <property name="leftMargin">
-           <number>3</number>
+           <number>9</number>
           </property>
           <property name="topMargin">
            <number>6</number>
           </property>
           <property name="rightMargin">
-           <number>3</number>
+           <number>9</number>
           </property>
           <property name="bottomMargin">
            <number>0</number>
@@ -399,7 +408,9 @@ QFrame {
        <item row="1" column="0">
         <widget class="QFrame" name="main_frame_content">
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">QStackedWidget QWidget {
+	background-color: rgb(211, 211, 212);
+}</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
@@ -407,7 +418,78 @@ QFrame {
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <layout class="QGridLayout" name="gridLayout_7"/>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QStackedWidget" name="stackedWidget">
+            <property name="styleSheet">
+             <string notr="true">QTabWidget::pane { /* The tab widget frame */
+    border-top: 3px solid  rgb(65, 65, 64);
+}
+
+QTabBar::tab {
+	color: rgb(211, 211, 212);
+    background: rgb(65, 65, 64);
+	border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    min-width: 40px;
+	min-height: 30px;
+}
+
+QTabBar::tab:selected{
+    background: rgb(158, 21, 16);
+	border: 2px rgb(158, 21, 16);
+}
+
+QTabBar::tab:hover {
+    background: rgb(158, 21, 16);
+	border:2px solid rgb(65, 65, 64);
+}
+
+QTabBar::tab:pressed{
+	background: rgb(65, 65, 64);
+	border: 2px rgb(158, 21, 16);
+}</string>
+            </property>
+            <widget class="QWidget" name="page">
+             <layout class="QGridLayout" name="gridLayout_9">
+              <item row="0" column="0">
+               <widget class="QTabWidget" name="tabWidget">
+                <property name="currentIndex">
+                 <number>1</number>
+                </property>
+                <widget class="QWidget" name="tab">
+                 <attribute name="title">
+                  <string>Tab 1</string>
+                 </attribute>
+                </widget>
+                <widget class="QWidget" name="tab_2">
+                 <attribute name="title">
+                  <string>Tab 2</string>
+                 </attribute>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_2"/>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item row="0" column="0">
