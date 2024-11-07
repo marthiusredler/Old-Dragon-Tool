@@ -1,4 +1,4 @@
-from modules.dice import roll
+from old_dragon_tool.utils.dice import roll
 
 
 def generateHex(terreno, clima):

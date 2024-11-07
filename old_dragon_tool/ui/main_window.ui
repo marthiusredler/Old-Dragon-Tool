@@ -153,23 +153,23 @@ QRadioButton::indicator {
 }
 
 QRadioButton::indicator::unchecked {
-	image: url(:/img/img/radiobutton_unchecked.png);
+	image: url(:/ico/resource/icons/radiobutton_unchecked.png);
 }
 
 QRadioButton::indicator:unchecked:pressed {
-	image: url(:/img/img/radiobutton_unchecked_pressed.png);
+	image: url(:/ico/resource/icons/radiobutton_unchecked_pressed.png);
 }
 
 QRadioButton::indicator::checked {
-	image: url(:/img/img/radiobutton_checked.png);
+	image: url(:/ico/resource/icons/radiobutton_checked.png);
 }
 
 QRadioButton::indicator:checked:hover {
-	image: url(:/img/img/radiobutton_checked_hover.png);
+	image: url(:/ico/resource/icons/radiobutton_checked_hover.png);
 }
 
 QRadioButton::indicator:checked:pressed {
-	image: url(:/img/img/radiobutton_checked_pressed.png);
+	image: url(:/ico/resource/icons/radiobutton_checked_pressed.png);
 }
 
 QCheckBox::indicator {
@@ -178,23 +178,23 @@ QCheckBox::indicator {
 }
 
 QCheckBox::indicator:unchecked {
-	image: url(:/img/img/checkbutton_unchecked.png);
+	image: url(:/ico/resource/icons/checkbutton_unchecked.png);
 }
 
 QCheckBox::indicator:unchecked:pressed {
-	image: url(:/img/img/checkbutton_unchecked_pressed.png);
+	image: url(:/ico/resource/icons/checkbutton_unchecked_pressed.png);
 }
 
 QCheckBox::indicator:checked {
-	image: url(:/img/img/checkbutton_checked.png);
+	image: url(:/ico/resource/icons/checkbutton_checked.png);
 }
 
 QCheckBox::indicator:checked:hover {
-	image: url(:/img/img/checkbutton_checked_hover.png);
+	image: url(:/ico/resource/icons/checkbutton_checked_hover.png);
 }
 
 QCheckBox::indicator:checked:pressed {
-	image: url(:/img/img/checkbutton_checked_hover.png);
+	image: url(:/ico/resource/icons/checkbutton_checked_hover.png);
 }
 
 
@@ -301,6 +301,9 @@ QCheckBox::indicator:checked:pressed {
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">image: url(:/img/resource/images/logo.png)</string>
             </property>
             <property name="text">
              <string/>
@@ -966,7 +969,8 @@ QPushButton::pressed {
   </widget>
  </widget>
  <resources>
-  <include location="source.qrc"/>
+  <include location="images.qrc"/>
+  <include location="icons.qrc"/>
  </resources>
  <connections/>
 </ui>

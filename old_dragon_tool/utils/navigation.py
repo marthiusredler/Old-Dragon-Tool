@@ -1,4 +1,4 @@
-from modules import dice
+from old_dragon_tool.utils import dice
 
 def get_navigation(local, have_bad_weather = False, have_natural_light = True, night_travel = False):
     

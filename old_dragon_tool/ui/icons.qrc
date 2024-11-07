@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="ico">
+    <file>../resource/icons/checkbutton_checked.png</file>
+    <file>../resource/icons/checkbutton_checked_hover.png</file>
+    <file>../resource/icons/checkbutton_unchecked.png</file>
+    <file>../resource/icons/checkbutton_unchecked_pressed.png</file>
+    <file>../resource/icons/radiobutton_checked.png</file>
+    <file>../resource/icons/radiobutton_checked_hover.png</file>
+    <file>../resource/icons/radiobutton_checked_pressed.png</file>
+    <file>../resource/icons/radiobutton_pressed_and_hover.png</file>
+    <file>../resource/icons/radiobutton_unchecked.png</file>
+    <file>../resource/icons/radiobutton_unchecked_hover.png</file>
+    <file>../resource/icons/radiobutton_unchecked_pressed.png</file>
+  </qresource>
+</RCC>
