@@ -19,12 +19,107 @@
     <height>600</height>
    </size>
   </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>65</red>
+        <green>65</green>
+        <blue>64</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>65</red>
+        <green>65</green>
+        <blue>64</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>65</red>
+        <green>65</green>
+        <blue>64</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>65</red>
+        <green>65</green>
+        <blue>64</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>65</red>
+        <green>65</green>
+        <blue>64</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>65</red>
+        <green>65</green>
+        <blue>64</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>65</red>
+        <green>65</green>
+        <blue>64</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>65</red>
+        <green>65</green>
+        <blue>64</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>65</red>
+        <green>65</green>
+        <blue>64</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
    <string notr="true">*{
 	background-color: rgb(65, 65, 64);
+}
+
+QFrame#menu_frame{
+	border: none;
 }
 
 QFrame#main_frame_content{
@@ -37,21 +132,70 @@ QFrame#main_frame_header{
 }
 
 QPushButton#btnMenu {
-	background-color: rgb(211, 211, 212);
-	color:  rgb(65, 65, 64);
+	background-color: rgb(65, 65, 64);
+	color:  rgb(211, 211, 212);
+	border: none;
+	padding-bottom:6px;
+	border-bottom-right-radius: 7px;
 }
 
 QPushButton#btnMenu::hover {
 	color: rgb(158, 21, 16);
-	font-weight: bold;
 }
 
 QLabel#logo_label {
 	image: url(:/img/img/logo.png);
 }
 
+QRadioButton::indicator {
+    width: 13px;
+    height: 13px;
+}
 
+QRadioButton::indicator::unchecked {
+	image: url(:/img/img/radiobutton_unchecked.png);
+}
 
+QRadioButton::indicator:unchecked:pressed {
+	image: url(:/img/img/radiobutton_unchecked_pressed.png);
+}
+
+QRadioButton::indicator::checked {
+	image: url(:/img/img/radiobutton_checked.png);
+}
+
+QRadioButton::indicator:checked:hover {
+	image: url(:/img/img/radiobutton_checked_hover.png);
+}
+
+QRadioButton::indicator:checked:pressed {
+	image: url(:/img/img/radiobutton_checked_pressed.png);
+}
+
+QCheckBox::indicator {
+    width: 13px;
+    height: 13px;
+}
+
+QCheckBox::indicator:unchecked {
+	image: url(:/img/img/checkbutton_unchecked.png);
+}
+
+QCheckBox::indicator:unchecked:pressed {
+	image: url(:/img/img/checkbutton_unchecked_pressed.png);
+}
+
+QCheckBox::indicator:checked {
+	image: url(:/img/img/checkbutton_checked.png);
+}
+
+QCheckBox::indicator:checked:hover {
+	image: url(:/img/img/checkbutton_checked_hover.png);
+}
+
+QCheckBox::indicator:checked:pressed {
+	image: url(:/img/img/checkbutton_checked_hover.png);
+}
 
 
 
@@ -63,6 +207,9 @@ QLabel#logo_label {
 
 
 </string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -138,7 +285,7 @@ QLabel#logo_label {
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">border: none;</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -283,7 +430,7 @@ QLabel::hover {
 	min-height: 35px;
 	background-color: rgb(211, 211, 212);
 	border-radius: 5px;
-	margin: 1px 0px;
+	margin: 3px 0px;
 	font-weight: 500;
 }
 
@@ -383,11 +530,17 @@ QFrame {
     </item>
     <item row="0" column="1">
      <widget class="QFrame" name="main_frame">
+      <property name="contextMenuPolicy">
+       <enum>Qt::DefaultContextMenu</enum>
+      </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
        <property name="leftMargin">
@@ -416,7 +569,10 @@ QFrame {
           <enum>QFrame::NoFrame</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
          </property>
          <layout class="QGridLayout" name="gridLayout_7">
           <property name="leftMargin">
@@ -438,7 +594,9 @@ QFrame {
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="styleSheet">
              <string notr="true">QTabWidget::pane { /* The tab widget frame */
-    border-top: 3px solid  rgb(65, 65, 64);
+	border-top: 3px solid  rgb(65, 65, 64);
+	border-bottom: 3px solid  rgb(65, 65, 64);
+	border-radius: 2px;
 }
 
 QTabBar::tab {
@@ -446,47 +604,253 @@ QTabBar::tab {
     background: rgb(65, 65, 64);
 	border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+	margin: 0px 1px;
+	padding: 0px 5px;
     min-width: 40px;
 	min-height: 30px;
 }
 
 QTabBar::tab:selected{
     background: rgb(158, 21, 16);
-	border: 2px rgb(158, 21, 16);
+	border: 1px rgb(158, 21, 16);
 }
 
 QTabBar::tab:hover {
     background: rgb(158, 21, 16);
-	border:2px solid rgb(65, 65, 64);
+	border:1px solid rgb(65, 65, 64);
 }
 
 QTabBar::tab:pressed{
 	background: rgb(65, 65, 64);
-	border: 2px rgb(158, 21, 16);
+	border: 1px rgb(158, 21, 16);
 }</string>
+            </property>
+            <property name="currentIndex">
+             <number>2</number>
             </property>
             <widget class="QWidget" name="page">
              <layout class="QGridLayout" name="gridLayout_9">
               <item row="0" column="0">
                <widget class="QTabWidget" name="tabWidget">
                 <property name="currentIndex">
-                 <number>1</number>
+                 <number>0</number>
                 </property>
                 <widget class="QWidget" name="tab">
                  <attribute name="title">
-                  <string>Tab 1</string>
+                  <string>Pontos de Jornada</string>
                  </attribute>
                 </widget>
                 <widget class="QWidget" name="tab_2">
                  <attribute name="title">
-                  <string>Tab 2</string>
+                  <string>Navegação e Acampamento</string>
+                 </attribute>
+                </widget>
+                <widget class="QWidget" name="tab_7">
+                 <attribute name="title">
+                  <string>Água e Alimentação</string>
                  </attribute>
                 </widget>
                </widget>
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="page_2"/>
+            <widget class="QWidget" name="page2">
+             <layout class="QGridLayout" name="gridLayout_11">
+              <item row="0" column="0">
+               <widget class="QTabWidget" name="tabWidget_3">
+                <property name="documentMode">
+                 <bool>false</bool>
+                </property>
+                <widget class="QWidget" name="tab_5">
+                 <attribute name="title">
+                  <string>Encontro nos Ermos</string>
+                 </attribute>
+                </widget>
+                <widget class="QWidget" name="tab_6">
+                 <attribute name="title">
+                  <string>Encontro por Tabela</string>
+                 </attribute>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page3">
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="0" column="0">
+               <widget class="QTabWidget" name="tabWidget_2">
+                <widget class="QWidget" name="tab_4">
+                 <property name="styleSheet">
+                  <string notr="true">*{
+	font: 12pt;
+}
+QLabel{
+	border-bottom: 2px solid rgb(158, 21, 16);
+	max-height: 20px;
+	font: 14pt
+}
+
+QPushButton {
+	min-height: 35px;
+	background-color: rgb(211, 211, 212);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom: 2px solid rgb(158, 21, 16);
+	margin: 1px 0px;
+	font-weight: 500;
+}
+
+QPushButton::hover {
+	background-color: rgb(158, 21, 16);
+	color: rgb(211, 211, 212);
+	font-weight: 500;
+}
+
+QPushButton::pressed {
+	background-color:rgb(65, 65, 64);
+	color: rgb(211, 211, 212);
+	border: 2px solid;
+	border-color: rgb(158, 21, 16);
+}</string>
+                 </property>
+                 <attribute name="title">
+                  <string>Hexcrawling</string>
+                 </attribute>
+                 <layout class="QGridLayout" name="gridLayout_12">
+                  <item row="2" column="0" colspan="2">
+                   <spacer name="verticalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item row="1" column="0" colspan="2">
+                   <widget class="QFrame" name="frame_3">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_15">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_4">
+                       <property name="text">
+                        <string>Clima:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QRadioButton" name="radioButton_13">
+                       <property name="text">
+                        <string>Tropical</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QRadioButton" name="radioButton_11">
+                       <property name="text">
+                        <string>Polar</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QRadioButton" name="radioButton_12">
+                       <property name="text">
+                        <string>Temperado</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="3" column="0" colspan="2">
+                   <widget class="QPushButton" name="pushButton">
+                    <property name="text">
+                     <string>Gerar Resultado!</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="2">
+                   <widget class="QFrame" name="frame">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_13">
+                     <item row="1" column="0">
+                      <widget class="QRadioButton" name="radioButton">
+                       <property name="text">
+                        <string>Planície</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QRadioButton" name="radioButton_5">
+                       <property name="text">
+                        <string>Geleira</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QRadioButton" name="radioButton_2">
+                       <property name="text">
+                        <string>Colina</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QRadioButton" name="radioButton_6">
+                       <property name="text">
+                        <string>Pantâno</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QRadioButton" name="radioButton_3">
+                       <property name="text">
+                        <string>Floresta</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QRadioButton" name="radioButton_7">
+                       <property name="text">
+                        <string>Montanha</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QRadioButton" name="radioButton_4">
+                       <property name="text">
+                        <string>Deserto</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0" colspan="2">
+                      <widget class="QLabel" name="label_2">
+                       <property name="text">
+                        <string>Local:</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </widget>
           </item>
          </layout>
@@ -504,7 +868,7 @@ QTabBar::tab:pressed{
           <string notr="true"/>
          </property>
          <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
+          <enum>QFrame::Box</enum>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Plain</enum>
@@ -581,11 +945,14 @@ QTabBar::tab:pressed{
             <property name="text">
              <string>◄</string>
             </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
             <property name="default">
              <bool>false</bool>
             </property>
             <property name="flat">
-             <bool>true</bool>
+             <bool>false</bool>
             </property>
            </widget>
           </item>
