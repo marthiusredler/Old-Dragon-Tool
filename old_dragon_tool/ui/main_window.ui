@@ -597,6 +597,116 @@ QFrame {
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="styleSheet">
              <string notr="true">QTabWidget::pane { /* The tab widget frame */
+	border: 3px solid  rgb(65, 65, 64);
+	border-radius: 4px;
+}
+
+QTabBar::tab {
+	color: rgb(211, 211, 212);
+    background: rgb(65, 65, 64);
+	border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+	margin: 0px 1px;
+	padding: 0px 5px;
+    min-width: 40px;
+	min-height: 30px;
+}
+
+QTabBar::tab:selected{
+    background: rgb(158, 21, 16);
+	border: 1px rgb(158, 21, 16);
+}
+
+QTabBar::tab:hover {
+    background: rgb(158, 21, 16);
+	border:1px solid rgb(65, 65, 64);
+}
+
+QTabBar::tab:pressed{
+	background: rgb(65, 65, 64);
+	border: 1px rgb(158, 21, 16);
+}
+
+*{
+	font-size: 12pt;
+}
+
+QLabel{
+	border-bottom: 3px solid rgb(158, 21, 16);
+	padding-bottom: 4px;
+	max-height: 20px;
+	font-size: 14pt
+}
+
+QPushButton {
+	min-height: 35px;
+	background-color: rgb(211, 211, 212);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom: 3px solid rgb(158, 21, 16);
+	font-weight: 500;
+}
+
+QPushButton::hover {
+	background-color: rgb(158, 21, 16);
+	color: rgb(211, 211, 212);
+	font-weight: 500;
+}
+
+QPushButton::pressed {
+	background-color:rgb(65, 65, 64);
+	color: rgb(211, 211, 212);
+	border: 2px solid;
+	border-color: rgb(158, 21, 16);
+}</string>
+            </property>
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
+            <widget class="QWidget" name="page">
+             <layout class="QGridLayout" name="gridLayout_9">
+              <item row="0" column="0">
+               <widget class="QTabWidget" name="tabWidget">
+                <property name="currentIndex">
+                 <number>1</number>
+                </property>
+                <widget class="QWidget" name="tab">
+                 <attribute name="title">
+                  <string>Pontos de Jornada</string>
+                 </attribute>
+                </widget>
+                <widget class="QWidget" name="tab_2">
+                 <attribute name="title">
+                  <string>Navegação e Acampamento</string>
+                 </attribute>
+                </widget>
+                <widget class="QWidget" name="tab_7">
+                 <attribute name="title">
+                  <string>Água e Alimentação</string>
+                 </attribute>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page2">
+             <layout class="QGridLayout" name="gridLayout_11">
+              <property name="leftMargin">
+               <number>9</number>
+              </property>
+              <property name="topMargin">
+               <number>9</number>
+              </property>
+              <property name="rightMargin">
+               <number>9</number>
+              </property>
+              <property name="bottomMargin">
+               <number>9</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QTabWidget" name="tabWidget_3">
+                <property name="styleSheet">
+                 <string notr="true">QTabWidget::pane { /* The tab widget frame */
 	border-top: 3px solid  rgb(65, 65, 64);
 	border-bottom: 3px solid  rgb(65, 65, 64);
 	border-radius: 2px;
@@ -627,40 +737,10 @@ QTabBar::tab:pressed{
 	background: rgb(65, 65, 64);
 	border: 1px rgb(158, 21, 16);
 }</string>
-            </property>
-            <property name="currentIndex">
-             <number>2</number>
-            </property>
-            <widget class="QWidget" name="page">
-             <layout class="QGridLayout" name="gridLayout_9">
-              <item row="0" column="0">
-               <widget class="QTabWidget" name="tabWidget">
+                </property>
                 <property name="currentIndex">
                  <number>0</number>
                 </property>
-                <widget class="QWidget" name="tab">
-                 <attribute name="title">
-                  <string>Pontos de Jornada</string>
-                 </attribute>
-                </widget>
-                <widget class="QWidget" name="tab_2">
-                 <attribute name="title">
-                  <string>Navegação e Acampamento</string>
-                 </attribute>
-                </widget>
-                <widget class="QWidget" name="tab_7">
-                 <attribute name="title">
-                  <string>Água e Alimentação</string>
-                 </attribute>
-                </widget>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="page2">
-             <layout class="QGridLayout" name="gridLayout_11">
-              <item row="0" column="0">
-               <widget class="QTabWidget" name="tabWidget_3">
                 <property name="documentMode">
                  <bool>false</bool>
                 </property>
@@ -668,11 +748,465 @@ QTabBar::tab:pressed{
                  <attribute name="title">
                   <string>Encontro nos Ermos</string>
                  </attribute>
+                 <layout class="QGridLayout" name="gridLayout_14">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="horizontalSpacing">
+                   <number>0</number>
+                  </property>
+                  <property name="verticalSpacing">
+                   <number>10</number>
+                  </property>
+                  <item row="4" column="0" colspan="2">
+                   <widget class="QPushButton" name="pushButton_2">
+                    <property name="text">
+                     <string>PushButton</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QFrame" name="frame_6">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_18">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_6">
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QRadioButton" name="radioButton_21">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QRadioButton" name="radioButton_22">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QRadioButton" name="radioButton_23">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="2" column="0" colspan="2">
+                   <widget class="QFrame" name="frame_5">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_19">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_7">
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QRadioButton" name="radioButton_26">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QRadioButton" name="radioButton_24">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QRadioButton" name="radioButton_25">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="2">
+                   <widget class="QFrame" name="frame_2">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_16">
+                     <item row="1" column="0">
+                      <widget class="QRadioButton" name="radioButton_8">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QRadioButton" name="radioButton_15">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QRadioButton" name="radioButton_9">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QRadioButton" name="radioButton_16">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QRadioButton" name="radioButton_10">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QRadioButton" name="radioButton_17">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QRadioButton" name="radioButton_14">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0" colspan="2">
+                      <widget class="QLabel" name="label_3">
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QFrame" name="frame_4">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_17">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_5">
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QRadioButton" name="radioButton_18">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QRadioButton" name="radioButton_19">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QRadioButton" name="radioButton_20">
+                       <property name="text">
+                        <string>RadioButton</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="3" column="0" colspan="2">
+                   <spacer name="verticalSpacer_3">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
                 </widget>
                 <widget class="QWidget" name="tab_6">
                  <attribute name="title">
                   <string>Encontro por Tabela</string>
                  </attribute>
+                 <layout class="QGridLayout" name="gridLayout_20">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="horizontalSpacing">
+                   <number>0</number>
+                  </property>
+                  <item row="1" column="0">
+                   <widget class="QFrame" name="frame_8">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_23">
+                     <property name="verticalSpacing">
+                      <number>9</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_10">
+                       <property name="text">
+                        <string>Dificuldade:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QRadioButton" name="radioButton_38">
+                       <property name="text">
+                        <string>Fácil</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QRadioButton" name="radioButton_39">
+                       <property name="text">
+                        <string>Mediano</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QRadioButton" name="radioButton_40">
+                       <property name="text">
+                        <string>Desafiador</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QFrame" name="frame_9">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_22">
+                     <property name="verticalSpacing">
+                      <number>9</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_11">
+                       <property name="text">
+                        <string>Nivel:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QRadioButton" name="radioButton_42">
+                       <property name="text">
+                        <string>Iniciante</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QRadioButton" name="radioButton_41">
+                       <property name="text">
+                        <string>Heroico</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QRadioButton" name="radioButton_43">
+                       <property name="text">
+                        <string>Avançado</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="2">
+                   <widget class="QFrame" name="frame_7">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_21">
+                     <item row="2" column="0">
+                      <widget class="QRadioButton" name="radioButton_28">
+                       <property name="text">
+                        <string>Colina</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="6" column="0">
+                      <widget class="QRadioButton" name="radioButton_36">
+                       <property name="text">
+                        <string>Humano</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QRadioButton" name="radioButton_30">
+                       <property name="text">
+                        <string>Deserto</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0" colspan="2">
+                      <widget class="QLabel" name="label_8">
+                       <property name="text">
+                        <string>Tabela:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QRadioButton" name="radioButton_32">
+                       <property name="text">
+                        <string>Geleira</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="0">
+                      <widget class="QRadioButton" name="radioButton_35">
+                       <property name="text">
+                        <string>Qualquer</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="1">
+                      <widget class="QRadioButton" name="radioButton_37">
+                       <property name="text">
+                        <string>Extraplanar</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QRadioButton" name="radioButton_27">
+                       <property name="text">
+                        <string>Planicie</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QRadioButton" name="radioButton_33">
+                       <property name="text">
+                        <string>Pantâno</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QRadioButton" name="radioButton_34">
+                       <property name="text">
+                        <string>Montanha</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QRadioButton" name="radioButton_29">
+                       <property name="text">
+                        <string>Floresta</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QRadioButton" name="radioButton_31">
+                       <property name="text">
+                        <string>Subterrâneo</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="6" column="1">
+                      <widget class="QCheckBox" name="checkBox">
+                       <property name="text">
+                        <string>Animais</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="3" column="0" colspan="2">
+                   <widget class="QPushButton" name="pushButton_3">
+                    <property name="text">
+                     <string>Gerar Resultado!</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0" colspan="2">
+                   <spacer name="verticalSpacer_4">
+                    <property name="orientation">
+                     <enum>Qt::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
                 </widget>
                </widget>
               </item>
@@ -680,46 +1214,37 @@ QTabBar::tab:pressed{
             </widget>
             <widget class="QWidget" name="page3">
              <layout class="QGridLayout" name="gridLayout_10">
+              <property name="leftMargin">
+               <number>9</number>
+              </property>
               <item row="0" column="0">
                <widget class="QTabWidget" name="tabWidget_2">
                 <widget class="QWidget" name="tab_4">
                  <property name="styleSheet">
-                  <string notr="true">*{
-	font: 12pt;
-}
-QLabel{
-	border-bottom: 2px solid rgb(158, 21, 16);
-	max-height: 20px;
-	font: 14pt
-}
-
-QPushButton {
-	min-height: 35px;
-	background-color: rgb(211, 211, 212);
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	border-bottom: 2px solid rgb(158, 21, 16);
-	margin: 1px 0px;
-	font-weight: 500;
-}
-
-QPushButton::hover {
-	background-color: rgb(158, 21, 16);
-	color: rgb(211, 211, 212);
-	font-weight: 500;
-}
-
-QPushButton::pressed {
-	background-color:rgb(65, 65, 64);
-	color: rgb(211, 211, 212);
-	border: 2px solid;
-	border-color: rgb(158, 21, 16);
-}</string>
+                  <string notr="true"/>
                  </property>
                  <attribute name="title">
                   <string>Hexcrawling</string>
                  </attribute>
                  <layout class="QGridLayout" name="gridLayout_12">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="horizontalSpacing">
+                   <number>0</number>
+                  </property>
+                  <property name="verticalSpacing">
+                   <number>10</number>
+                  </property>
                   <item row="2" column="0" colspan="2">
                    <spacer name="verticalSpacer_2">
                     <property name="orientation">
