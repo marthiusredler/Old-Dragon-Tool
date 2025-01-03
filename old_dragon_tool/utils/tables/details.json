@@ -1,0 +1,47 @@
+{
+
+	"humano": {
+	"cabelo": ["curto", "comprido", "cacheado", "liso", "trançado", "desgrenhado", "grisalho", "preto", "castanho", "ruivo", "loiro", "tingido", "coque", "ondulado", "nenhum"],
+	"olhos": ["castanhos", "azuis", "verdes", "pretos", "cinzentos", "âmbar", "violetas", "grandes", "miúdos", "intensos", "expressivos", "cansados", "opacos", "brilhantes", "incomuns"],
+	"cicatrizes_ou_traços": ["nenhum", "cicatriz no rosto", "marca de queimadura", "tatuagem tribal", "piercing no nariz", "mordida de animal", "dedo faltando", "olho de vidro", "dentes tortos", "mancha de nascença", "orelhas rasgadas", "nariz quebrado", "sobrancelha cortada", "rosto marcado", "pescoço tatuado"],
+	"tom_de_voz": ["grave", "agudo", "médio", "rouco", "suave", "estridente", "calmo", "animado", "lento", "rápido", "autoridade", "nervoso", "arrogante", "persuasivo", "sarcástico"],
+	"profissao": ["ferreiro", "fazendeiro", "soldado", "mercador", "sacerdote", "médico", "artesão", "pescador", "explorador", "alquimista", "bardo", "cozinheiro", "ladrão", "nobre", "nenhuma"]
+	},
+	"elfo": {
+	"cabelo": ["longo", "prateado", "liso", "trançado", "solto", "dourado", "branco", "ruivo", "preto", "verde", "azul", "cacheado", "grisalho", "curto", "nenhum"],
+	"olhos": ["verdes", "dourados", "azuis", "cinzentos", "pretos", "âmbar", "violetas", "grandes", "intensos", "expressivos", "brilhantes", "perfurantes", "profundos", "claros", "místicos"],
+	"cicatrizes_ou_traços": ["nenhum", "tatuagem mágica", "cicatriz no braço", "marca ritualística", "corte na orelha", "olho ferido", "mancha de nascença", "pele marcada", "rosto impecável", "pequeno ferimento", "símbolo arcano", "cicatriz de batalha", "mão com runas", "pescoço marcado", "boca deformada"],
+	"tom_de_voz": ["místico", "calmo", "melódico", "profundo", "estridente", "suave", "cortante", "austero", "eloquente", "sussurrado", "grave", "autoritário", "persuasivo", "arrogante", "lírico"],
+	"profissao": ["arqueiro", "feiticeiro", "guardião", "mestre dos arcos", "herborista", "sábio", "espião", "cantor", "druida", "viajante", "bibliotecário", "ranger", "alquimista", "místico", "nenhuma"]
+	},
+	"anao": {
+	"cabelo": ["curto", "longa barba", "trançado", "desgrenhado", "grisalho", "ruivo", "careca", "castanho", "preto", "branco", "cheio de nós", "com tranças ornamentadas", "oleoso", "prateado", "nenhum"],
+	"olhos": ["castanhos", "pretos", "cinzentos", "vermelhos", "amarelos", "intensos", "penetrantes", "miúdos", "grandes", "sobrancelhas grossas", "expressivos", "rígidos", "cansados", "opacos", "brilhantes"],
+	"cicatrizes_ou_traços": ["nenhum", "nariz quebrado", "cicatriz na testa", "marca de martelo", "pele enrugada", "tatuagem de clã", "dedo cortado", "barba com falhas", "queimadura antiga", "mão calejada", "orelhas rasgadas", "boca torta", "olho de vidro", "braço marcado", "corte profundo"],
+	"tom_de_voz": ["grave", "rouco", "lento", "profundo", "intimidante", "calmo", "forte", "autoritário", "cortante", "duro", "mal-humorado", "arrogante", "explosivo", "caloroso", "respeitável"],
+	"profissao": ["ferreiro", "minerador", "construtor", "guerreiro", "mercador", "sacerdote", "artesão", "escavador", "batedor", "inventor", "estrategista", "ceramista", "bebedor profissional", "guarda", "nenhuma"]
+	},
+	"halfling": {
+	"cabelo": ["curto", "trançado", "ondulado", "grisalho", "desgrenhado", "solto", "preto", "castanho", "ruivo", "loiro", "desarrumado", "liso", "cacheado", "prateado", "nenhum"],
+	"olhos": ["castanhos", "verdes", "azuis", "âmbar", "pretos", "cinzentos", "expressivos", "alegres", "grandes", "pequenos", "brilhantes", "opacos", "penetrantes", "intensos", "miúdos"],
+	"cicatrizes_ou_traços": ["nenhum", "marca de aventura", "cicatriz no braço", "mancha de nascença", "dentes tortos", "orelha cortada", "pele marcada", "sobrancelha cortada", "rosto enrugado", "tatuagem familiar", "ferida antiga", "mão calejada", "pé marcado", "símbolo mágico", "queimadura"],
+	"tom_de_voz": ["calmo", "animado", "estridente", "suave", "sarcástico", "gritante", "persuasivo", "grave", "médio", "rápido", "alegre", "inseguro", "encantador", "suave", "autoritário"],
+	"profissao": ["explorador", "mercador", "batedor", "caçador", "guerreiro", "inventor", "alquimista", "ferreiro", "viajante", "mendigo", "ranger", "cozinheiro", "cantor", "ladrão", "nenhuma"]
+	},
+	"meio-elfo": {
+	"cabelo": ["curto", "longo", "prateado", "trançado", "cacheado", "grisalho", "preto", "castanho", "loiro", "ruivo", "ondulado", "solto", "branco", "desgrenhado", "nenhum"],
+	"olhos": ["verdes", "azuis", "castanhos", "âmbar", "pretos", "cinzentos", "dourados", "grandes", "penetrantes", "intensos", "místicos", "cansados", "claros", "vivos", "opacos"],
+	"cicatrizes_ou_traços": ["nenhum", "cicatriz no braço", "marcas de luta", "mancha de nascença", "tatuagem tribal", "marca ritualística", "pele marcada", "rosto enrugado", "corte na orelha", "rosto impecável", "olho ferido", "mão calejada", "pescoço marcado", "sobrancelha cortada", "queimadura"],
+	"tom_de_voz": ["calmo", "melódico", "suave", "rouco", "persuasivo", "autoritário", "cortante", "animado", "grave", "místico", "inseguro", "encantador", "sarcástico", "eloquente", "lento"],
+	"profissao": ["viajante", "guerreiro", "batedor", "arqueiro", "mercador", "médico", "explorador", "místico", "artesão", "herborista", "ranger", "cozinheiro", "alquimista", "druida", "nenhuma"]
+	},
+	"gnomo": {
+	"cabelo": ["curto", "cacheado", "grisalho", "desgrenhado", "ruivo", "trançado", "solto", "oleoso", "preto", "branco", "azul", "verde", "prateado", "liso", "nenhum"],
+	"olhos": ["verdes", "azuis", "castanhos", "pretos", "cinzentos", "âmbar", "grandes", "intensos", "penetrantes", "alegres", "brilhantes", "místicos", "expressivos", "pequenos", "vivos"],
+	"cicatrizes_ou_traços": ["nenhum", "cicatriz pequena", "nariz torto", "dente quebrado", "marca de tinta", "tatuagem mágica", "rosto sujo", "mancha de nascença", "corte na orelha", "rosto enrugado", "queimadura antiga", "sardas", "sobrancelha fina", "dentes tortos", "cicatriz de experimento"],
+	"tom_de_voz": ["agudo", "calmo", "animado", "rápido", "sarcástico", "persuasivo", "inseguro", "alegre", "místico", "rouco", "estridente", "lírico", "autoridade", "nervoso", "encantador"],
+	"profissao": ["inventor", "artesão", "explorador", "batedor", "mercador", "alquimista", "herborista", "ranger", "cientista", "médico", "cantor", "cozinheiro", "mágico", "pesquisador", "nenhuma"]
+	}
+	
+  }
+  

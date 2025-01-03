@@ -1,0 +1,55 @@
+{
+	"homem": {
+	  "humano": {
+		"inicio": ["Rob", "Jo", "Mar", "Lu", "An", "Ed", "Vic", "Fer", "Hen", "Pe", "Da", "El", "Leo", "Gab", "Ric"],
+		"fim": ["nhon", "sco", "valdo", "berto", "fran", "mano", "lando", "vito", "clau", "dino", "nardo", "iel", "rico", "fredo", "mar"]
+	  },
+	  "elfo": {
+		"inicio": ["Ari", "Eli", "Tha", "Lia", "Gal", "Fin", "Car", "Kel", "Tha", "Ero", "Val", "Ere", "Sil", "Lor", "Ala"],
+		"fim": ["thir", "anor", "dir", "ion", "las", "lios", "fen", "dien", "ras", "dor", "rion", "mon", "thel", "den", "iel"]
+	  },
+	  "anao": {
+		"inicio": ["Dur", "Tor", "Brom", "Har", "Thra", "Kil", "Dor", "Bar", "Or", "Gim", "Thrond", "Fur", "Gran", "Nar", "Bol"],
+		"fim": ["in", "orn", "ric", "dar", "gar", "mor", "grim", "dor", "fund", "nir", "gon", "kar", "bor", "dim", "gor"]
+	  },
+	  "halfling": {
+		"inicio": ["Bil", "Fro", "Sam", "Pip", "Mar", "Fil", "Tol", "Car", "Ron", "Per", "Len", "Tim", "Mat", "Dan", "Jer"],
+		"fim": ["bo", "do", "son", "lin", "wick", "bert", "pin", "no", "bin", "er", "tin", "wick", "bel", "cus", "ton"]
+	  },
+	  "meio-elfo": {
+		"inicio": ["El", "Ara", "Ther", "Val", "Lian", "Eri", "Mor", "Kai", "Lor", "Syl", "Nar", "Ren", "Kar", "Thel", "Ery"],
+		"fim": ["ion", "las", "or", "rin", "eth", "ian", "fen", "den", "thir", "mon", "dor", "ath", "dir", "ven", "rion"]
+	  },
+	  "gnomo": {
+		"inicio": ["Nim", "Quil", "Bin", "Cor", "Ell", "Fiz", "Gim", "Lor", "Mur", "Nar", "Pin", "Rol", "Tiv", "Zim", "Tur"],
+		"fim": ["bin", "wick", "bar", "dor", "gin", "ly", "per", "ton", "lin", "ric", "vin", "men", "gus", "tor", "ber"]
+	  }
+	},
+	"mulher": {
+	  "humano": {
+		"inicio": ["Ana", "Bea", "Clara", "Diana", "Ela", "Fabi", "Gab", "Hele", "Isa", "Ju", "Ka", "Lia", "Maria", "Nata", "Olí"],
+		"fim": ["line", "isa", "nha", "lina", "la", "na", "cia", "rina", "lia", "sa", "na", "nda", "re", "via", "la"]
+	  },
+	  "elfo": {
+		"inicio": ["Ari", "Ely", "Lia", "Thea", "Val", "Ser", "Eri", "Tha", "Syl", "Cal", "Lor", "Fae", "Ana", "Gal", "Ina"],
+		"fim": ["wen", "riel", "na", "tha", "dia", "lia", "ith", "wen", "via", "sia", "wyn", "lor", "nis", "dia", "len"]
+	  },
+	  "anao": {
+		"inicio": ["Dur", "Bri", "Hel", "Gar", "Mar", "Tho", "Dor", "Bar", "Nor", "Gri", "Thrond", "Fur", "Gran", "Nar", "Bol"],
+		"fim": ["ina", "ga", "dis", "dra", "ra", "ora", "gra", "via", "nir", "gen", "rin", "lor", "bur", "den", "dia"]
+	  },
+	  "halfling": {
+		"inicio": ["Bel", "Pip", "Sam", "Lil", "Mar", "Fil", "Tol", "Car", "Ron", "Per", "Len", "Tim", "Mat", "Dan", "Jer"],
+		"fim": ["ba", "do", "lyn", "lin", "wick", "bert", "pin", "na", "bin", "er", "tin", "lyn", "bel", "cus", "ton"]
+	  },
+	  "meio-elfo": {
+		"inicio": ["El", "Ara", "Ther", "Val", "Lian", "Eri", "Mor", "Kai", "Lor", "Syl", "Nar", "Ren", "Kar", "Thel", "Ery"],
+		"fim": ["ion", "las", "or", "rin", "eth", "ian", "fen", "den", "thir", "mon", "dor", "ath", "dir", "ven", "rion"]
+	  },
+	  "gnomo": {
+		"inicio": ["Nim", "Quil", "Bin", "Cor", "Ell", "Fiz", "Gim", "Lor", "Mur", "Nar", "Pin", "Rol", "Tiv", "Zim", "Tur"],
+		"fim": ["bin", "wick", "bar", "dor", "gin", "ly", "per", "ton", "lin", "ric", "vin", "men", "gus", "tor", "ber"]
+	  }
+	}
+  }
+  

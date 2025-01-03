@@ -1,8 +1,20 @@
-from old_dragon_tool.utils import dice
+from utils.dice import NewDice
 
-def get_navigation(local, have_bad_weather = False, have_natural_light = True, night_travel = False):
+def makeNavigationTest(local, have_bad_weather = False, have_natural_light = True, night_travel = False):
+    result = ''
+    testModificator = 0
+    twoD6 = NewDice(2, 6)
     
-	ground_type = {
+    if have_bad_weather:
+        testModificator -= 4
+	
+    if not have_natural_light:
+        testModificator -= 2
+  
+    if night_travel:
+        testModificator -= 4 
+
+    ground_type = {
 		'planicie' : -1,
 		'colina' : -2,
 		'floresta' : -2,
@@ -12,30 +24,21 @@ def get_navigation(local, have_bad_weather = False, have_natural_light = True, n
 		'montanha' : -4,
     }
 	
-	test_mod = ground_type[local]
- 
-	#Situational:
-	if have_bad_weather:
-		test_mod -= 4
+    testModificator += ground_type[local]
+    testResult = twoD6.roll() + testModificator	
 	
-	if not have_natural_light:
-		test_mod -= 2
-  
-	if night_travel:
-		test_mod -= 4
-  
-	dice_test = dice.roll(2, 6) + test_mod	
-	
-	#Navigation
-	if dice_test < -3:
-		return f'Seguem para direção Indesejada. - 🡣'
-	elif dice_test == -2:
-		return f'Seguem para direção Indesejada. - 🡦'
-	elif dice_test == -1:
-		return f'Seguem para direção Indesejada. - 🡧'
-	elif dice_test == 0:
-		return f'Seguem para direção Indesejada. - 🡤'
-	elif dice_test == 1:
-		return f'Seguem para direção Indesejada. - 🡥'
-	else:
-		return f'Seguem para direção Desejada. - 🡡'
+	#Navigation1
+    if testResult < -3:
+        result = f'Seguem para direção Indesejada. - 🡣'
+    elif testResult == -2:
+        result = f'Seguem para direção Indesejada. - 🡦'
+    elif testResult == -1:
+        result = f'Seguem para direção Indesejada. - 🡧'
+    elif testResult == 0:
+        result = f'Seguem para direção Indesejada. - 🡤'
+    elif testResult == 1:
+        result = f'Seguem para direção Indesejada. - 🡥'
+    else:
+        result = f'Seguem para direção Desejada. - 🡡'
+    
+    return result
