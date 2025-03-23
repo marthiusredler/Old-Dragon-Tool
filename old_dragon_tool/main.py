@@ -1,5 +1,8 @@
 from utils.hexgenerator import generateHex
 from utils.navigation import makeNavigationTest
-from utils.npcgenerator import test
+from utils.npcgenerator import NewNPC
+from utils.discoverygenerator import getNewDiscovery
 
-test()
+print(getNewDiscovery( ))
+
+
